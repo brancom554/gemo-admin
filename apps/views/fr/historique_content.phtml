@@ -1,0 +1,99 @@
+<main>
+    <h2 class="main-title">Historiques</h2>
+        <div class="track">
+            <span <?php if($page_requested =="administration"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
+        </div>
+
+        <div class="card-filter">
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="marchand" class="form-label">Marchands</label>
+                <select id="marchand" class="form-select">
+                    <option selected>Séléctionner un marchand</option>
+                    <?php if(isset($data['marchand'])): ?>
+                        <?php foreach($data['marchand'] as $marchand): ?>
+                            <option value="<?=$marchand['application_uuid'] ?>"><?=$marchand['firstname'] ?> <?=$marchand['lastname'] ?></option>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="debut" class="form-label">Date début</label>
+                <input type="date" class="form-control" id="debut">
+            </div>
+            <div class="col-md-4">
+                <label for="inputZip" class="form-label">Date fin</label>
+                <input type="date" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Filtrer</button>
+            </div>
+        </form>
+        </div>
+
+        <section class="recent">
+                <div class="activity">
+                    <div style="padding-top: 5px;" class="activity-card">
+                        <h3>Liste des opérations</h3>
+                        <div class="table-responsive">
+                            <!--<div class="research">
+                                <div>
+                                    <div id="form-research"><input id="filter" type="text" placeholder="Rechercher..."></div>
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>-->
+                            <table id="table" style="margin-top: 30px;" border="0">
+                                <thead>
+                                    <tr>
+                                        <th>Types</th>
+                                        <th>Descriptions</th>
+                                        <th>Dates</th>
+                                        
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php if(isset($data['licences'])): ?>
+                                        <?php foreach($data['licences'] as $licence): ?>
+                                        <tr>
+                                             <td><?=$licence['licence_key'] ?></td>
+                                             
+                                             <td><?=$licence['activation_date'] ?></td>
+                                             <td><?=$licence['expiration_date'] ?></td>
+                                             <td>
+                                                  <?php if($licence['is_active'] == 1): ?>
+                                                       <span class="span-success success">Activer</span>
+                                                  <?php endif; ?>
+                                                  <?php if($licence['is_active'] == 0): ?>
+                                                       <span class="span-success danger">Bloquer</span>
+                                                  <?php endif; ?>
+                                                  <!--<?php //if($licence['is_active'] == 2): ?>
+                                                       <span class="span-success danger">Revoquer</span>
+                                                  <?php //endif; ?>-->
+                                             </td>
+                                             
+                                             <td style="display:flex">
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/administration/agent/modifier/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 primary cursor">Modifier</span>
+                                             </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                    <!--<tr>
+                                        <td>Client 1</td>
+                                        <td>10 Janvier 2020</td>
+                                        <td>20 Janvier 2020</td>
+                                        <td>123456789</td>
+                                        <td><span class="span-success success ">Activer</span></td>
+                                        <td>
+                                            <span class="btn-action white pg-5 success">Activer</span>
+                                            <span class="btn-action white pg-5 primary">Bloquer</span>
+                                            <span class="btn-action white pg-5 danger">Revoquer</span>
+                                        </td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                </div>
+            </section>
+</main>
