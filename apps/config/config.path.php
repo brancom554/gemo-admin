@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SERVER[ 'APPLICATION_ENV' ])) DEFINE('_INSTANCE', 'DEV'); // Local Test
+if(!isset($_SERVER[ 'APPLICATION_ENV' ])) DEFINE('_INSTANCE', 'DATABASE'); // Local Test
 else DEFINE('_INSTANCE', $_SERVER[ 'APPLICATION_ENV' ]);
 //   echo "start config.path -> server instance :  ".$_SERVER[ 'APPLICATION_ENV' ];
 // echo "start config.path -> apps instance : ".$_SERVER[ 'APPLICATION_ENV' ]; 
