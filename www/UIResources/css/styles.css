@@ -138,8 +138,8 @@ button:focus {
 	border: 0;
 	border-radius: 35px;
 	color: #fff;
-	background: #ff678c;
-    background: linear-gradient( 65deg, #FF4D79 0, #FF809F 100%);
+	background: #ffac64;
+    /*background: linear-gradient( 65deg, #FF4D79 0, #FF809F 100%)*/;
 	transition: all 500ms ease;
 	cursor: pointer;
 	position: relative;
@@ -147,12 +147,12 @@ button:focus {
 	overflow: hidden;
 	white-space: nowrap;
     transition: background .5s ease;
-    box-shadow: 0px 3px 10px -3px #fb7596;
+    box-shadow: 0px 3px 10px -3px #ffac64;
 }
 
 .button:hover {
     color: #fff;
-    box-shadow: 0px 5px 25px -3px #fb7596;
+    box-shadow: 0px 5px 25px -3px #ffac64;
 }
 
 dl, ol, ul {
@@ -203,7 +203,7 @@ dl, ol, ul {
 }
 
 .small-title {
-    color: #ff678c;
+    color: #FFAC64;
     margin-bottom: 0;
     font-size: 16px;
     text-transform: capitalize;
@@ -237,7 +237,7 @@ dl, ol, ul {
 	right: 25px;
 	bottom: 20px;
 	text-align: center;
-	background: #ff678c;
+	background: #FFAC64;
 	transition: background 0.5s;
 	z-index: 11;
 }
@@ -272,6 +272,27 @@ dl, ol, ul {
 	-moz-animation: bounce 3s infinite ease-in-out;
 	animation: bounce 3s infinite ease-in-out;
 }
+
+::-webkit-scrollbar{
+	width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track{
+	border-radius: 5px;
+  }
+
+  .single-features-item svg{
+	color:#fff
+}
+
+  .single-features-item:hover svg{
+	  color: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+	background: #FFAC64;
+	border-radius: 10px;
+  }
 
 @-webkit-keyframes bounce {
 	0% {
@@ -429,7 +450,7 @@ dl, ol, ul {
 	color: #fff;
 	text-transform: capitalize;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 15px;
 	letter-spacing: 0.7px;
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -458,11 +479,11 @@ dl, ol, ul {
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-	color: #ff678c;
+	color: #FFAC64;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link, .navbar-b.navbar-reduce .active > .nav-link, .navbar-b.navbar-reduce .nav-link.show, .navbar-b.navbar-reduce .nav-link.active {
-	color: #ff678c;
+	color: #FFAC64;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
@@ -629,7 +650,7 @@ dl, ol, ul {
 .home-area .home-content h1 {
 	font-size: 48px;
 	color: #ffffff;
-	text-transform: capitalize;
+	text-transform: inherit;
 	margin-bottom: 20px;
 	font-weight: 700;
 	line-height: 1.3;
@@ -843,7 +864,7 @@ dl, ol, ul {
 }
 
 .about-info ul li i {
-	color: #ff678c;
+	color: #ffc107;
 	font-size: 15px;
 	padding-right: 5px;
 }
@@ -1373,7 +1394,7 @@ dl, ol, ul {
 	text-align: center;
 }
 .download-app-text h5 {
-    color: #ff678c;
+    color: #ffac64;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 5px;
@@ -1612,12 +1633,12 @@ button, input, textarea:focus {
     background: transparent;
     text-align: center;
     transition: .3s;
-    border: 1px dashed #ff678c;
+    border: 1px dashed #ffac64;
 }
 
 .footer-social-icon a i:hover {
 	color: #ffffff;
-	background: #ff678c;
+	background: #ffac64;
 	transition: .3s;
 }
 

@@ -160,6 +160,10 @@ footer .copyright {
   padding: 20px;
 }
 
+.padding-1{
+  padding: 1rem;
+}
+
 .rem-1-5{
   font-size: 1.2rem;
   font-weight: 600;
@@ -275,7 +279,7 @@ footer .copyright {
 }
 
 ::-webkit-scrollbar-track{
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb{

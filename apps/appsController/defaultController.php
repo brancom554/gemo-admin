@@ -104,8 +104,8 @@ switch ($page_requested) {
 		include "prix_en_baisse_page.php";
 		break;
 
-	case "checkout":
-		include "checkout_page.php";
+	case "essai":
+		include "essai.php";
 		break;
 
 	case "sousCategory":

@@ -54,29 +54,37 @@ $(document).ready(function(){
 
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
         //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Juin', 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
         datasets: [{
             label: 'Opérations',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [50,12, 19, 3, 5, 2, 3, 0],
             fill: true,
+            tension:1,
             backgroundColor: [
-                '#FFAC64'
+                '#00A8F3'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)'
+                '#00A8F3'
             ],
-            borderWidth: 1
+            borderWidth: 2,
+            borderRadius:10,
+            maxBarThickness:8,
         }]
     },
     options: {
+        responsive:true,
         scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+            yAxes: [{
+                ticks:{
+                    beginAtZero: true
+                }
+                
+            }]
+        },
+        //aspectRatio:1
     }
 });
 
@@ -101,7 +109,10 @@ const data = {
 var ctx = document.getElementById('myChart2');
     var myChart2 = new Chart(ctx, {
     type: 'doughnut',
-    data: data
+    data: data,
+    options:{
+        responsive:true,
+    }
 });
   }
 

@@ -37,7 +37,7 @@ class Database extends PDO
             $db->commit();
             return true;
         }else {
-            return $db->errorInfo();
+            return $query->errorInfo();
         }
     }
 
@@ -51,7 +51,7 @@ class Database extends PDO
             return $query->fetchAll();
         }else {
             //var_dump($sql);
-            return $db->errorInfo();
+            return $query->errorInfo();
         }
     }
 
@@ -65,7 +65,7 @@ class Database extends PDO
             return $query->fetch();
         }else {
             //var_dump($sql);
-            return $db->errorInfo();
+            return $query->errorInfo();
         }
     }
 }
