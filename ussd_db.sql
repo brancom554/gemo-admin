@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 26, 2021 at 06:41 PM
+-- Generation Time: Aug 30, 2021 at 03:14 PM
 -- Server version: 8.0.23
 -- PHP Version: 7.4.15
 
@@ -104,9 +104,9 @@ CREATE TABLE `category_ussd` (
 
 INSERT INTO `category_ussd` (`category_ussd_id`, `ussd_code`, `category_id`, `operation_type_id`, `company_token`, `application_uuid`, `data_version`, `network_operator_number`, `network_operator_name`) VALUES
 (1, '*855*1*1*1*', 3, 1, 'TEST08072021', '041750ce-e473-462c-af82-99567dc25b4b', '3', 2, 'MOOV'),
-(2, '*880*1*1*', 3, 1, 'TEST08072021', '041750ce-e473-462c-af82-99567dc25b4b', '3', 1, 'MTN'),
+(2, '*880*3*1*', 3, 1, 'TEST08072021', '041750ce-e473-462c-af82-99567dc25b4b', '3', 1, 'MTN'),
 (3, '*173*5*1#', 4, 6, NULL, NULL, '3', 2, 'MOOV'),
-(4, '*880*2*2*1*', 6, 2, NULL, NULL, '3', 1, 'MTN'),
+(4, '*880*2*1*', 6, 2, NULL, NULL, '3', 1, 'MTN'),
 (5, '*855*4*1*', 6, 2, NULL, NULL, '3', 2, 'MOOV'),
 (6, '*106*10*3*', 7, 7, NULL, NULL, '3', 1, 'MTN'),
 (7, '*173*1*', 10, 7, NULL, NULL, '3', 2, 'MOOV'),
@@ -246,19 +246,19 @@ CREATE TABLE `licences` (
 
 INSERT INTO `licences` (`licence_id`, `licence_key`, `creation_date`, `created_by_email`, `licence_file_url`, `is_for_equipement_flag`, `application_uuid`, `data_version`, `created_for_company_id`, `is_active`, `activation_date`, `expiration_date`, `licence_parent_id`, `licence_type_id`) VALUES
 (1, '534c0-c4e21-265f5-c2282-54663', '2021-08-06 01:59:00', NULL, NULL, 1, '14455', NULL, 1, 1, '2021-08-11 00:00:00', '2021-08-31 00:00:00', 2, 1),
-(2, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, 1, 0, NULL, NULL, NULL, NULL),
-(3, '264a86d7-a256-46e4-8296-83f6588fcdc8', '2021-08-11 18:35:26', 'test@test.com', NULL, 0, NULL, '1', 1, 0, NULL, '2021-09-10 18:37:36', NULL, 3),
-(4, '5b51f570-0488-4c2d-90cb-b6df2966a1e4', '2021-08-11 18:35:26', 'test@test.com', NULL, 1, '39f33214-b879-4495-b2b1-94bdb458da59', '1', 1, 1, '2021-08-23 00:00:00', NULL, 3, 3),
-(5, 'abcd-efgh-1234-0000', '2021-08-12 06:57:21', 'test@test.com', NULL, 1, '14455', '1', 1, 1, '2021-08-12 00:00:00', '2021-10-06 06:57:21', 3, 3),
-(6, 'dc8782dc-028d-11ec-9a03-0242ac130003', '2021-08-21 15:40:54', NULL, NULL, 0, '81197b11-a33c-42d5-bf29-24bff08a9c8c', '3', 2, 1, '2021-08-24 00:00:00', NULL, NULL, 1),
-(7, '404442ce-028e-11ec-9a03-0242ac130003', '2021-08-21 15:44:05', NULL, NULL, 1, 'ca4a2254-f92d-403e-b843-42483d24eaea', '3', 2, 1, '2021-08-26 00:00:00', NULL, 6, 1),
-(8, '534c0-c4e21-265f5-c2282-54663', '2021-08-06 01:59:00', NULL, NULL, 1, '1', NULL, 1, 1, '2021-08-12 19:23:00', '2021-08-31 00:00:00', NULL, 1),
-(9, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(2, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, 1, 0, NULL, '2021-11-17 16:08:23', NULL, NULL),
+(3, '264a86d7-a256-46e4-8296-83f6588fcdc8', '2021-08-11 18:35:26', 'test@test.com', NULL, 0, NULL, '1', 1, 0, NULL, '2021-09-10 18:37:36', NULL, 2),
+(4, '5b51f570-0488-4c2d-90cb-b6df2966a1e4', '2021-08-11 18:35:26', 'test@test.com', NULL, 1, '39f33214-b879-4495-b2b1-94bdb458da59', '1', 1, 1, '2021-08-23 00:00:00', '2021-11-17 16:08:30', 3, 2),
+(5, 'abcd-efgh-1234-0000', '2021-08-12 06:57:21', 'test@test.com', NULL, 1, '14455', '1', 1, 1, '2021-08-12 00:00:00', '2021-10-06 06:57:21', 3, 2),
+(6, 'dc8782dc-028d-11ec-9a03-0242ac130003', '2021-08-21 15:40:54', NULL, NULL, 0, '81197b11-a33c-42d5-bf29-24bff08a9c8c', '3', 2, 1, '2021-08-24 00:00:00', '2021-12-01 16:08:38', NULL, 2),
+(7, '404442ce-028e-11ec-9a03-0242ac130003', '2021-08-21 15:44:05', NULL, NULL, 1, 'ca4a2254-f92d-403e-b843-42483d24eaea', '3', 2, 1, '2021-08-26 00:00:00', '2021-12-09 16:09:02', 6, 2),
+(8, '534c0-c4e21-265f5-c2282-54663', '2021-08-06 01:59:00', NULL, NULL, 1, '1', NULL, 1, 1, '2021-08-12 19:23:00', '2021-08-31 00:00:00', NULL, 2),
+(9, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, NULL, 0, NULL, '2021-12-14 16:08:54', NULL, NULL),
 (10, '43778-4121e-897d7-7bcc3-5e867', '2021-08-09 19:40:00', NULL, NULL, 1, NULL, NULL, NULL, 1, NULL, '2021-08-26 00:00:00', NULL, NULL),
-(11, 'fa149-fd124-e8e75-e9a54-aa4f2', '2021-08-12 14:57:00', NULL, NULL, 1, NULL, NULL, NULL, 1, '2021-08-12 15:48:00', '2021-08-11 00:00:00', 1, NULL),
-(12, '2766b-9324c-25d9a-93c22-46e78', '2021-08-12 15:50:00', NULL, NULL, 1, NULL, NULL, NULL, 1, '2021-08-12 15:50:00', '2021-08-16 00:00:00', 0, NULL),
-(13, '3d0e8-44ec6-e023f-30795-dbd1d', '2021-08-12 19:24:00', NULL, NULL, 1, NULL, NULL, NULL, 1, '2021-08-12 19:24:00', '2021-08-19 00:00:00', 0, NULL),
-(14, '19deb-353f4-79808-a16e9-f40ec', '2021-08-20 17:34:00', NULL, NULL, NULL, NULL, NULL, 3, 1, '2021-08-20 17:34:00', '2021-08-31 00:00:00', NULL, 1),
+(11, 'fa149-fd124-e8e75-e9a54-aa4f2', '2021-08-12 14:57:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 15:48:00', '2021-08-11 00:00:00', 1, NULL),
+(12, '2766b-9324c-25d9a-93c22-46e78', '2021-08-12 15:50:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 15:50:00', '2021-08-16 00:00:00', 0, NULL),
+(13, '3d0e8-44ec6-e023f-30795-dbd1d', '2021-08-12 19:24:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 19:24:00', '2021-08-19 00:00:00', 0, NULL),
+(14, '19deb-353f4-79808-a16e9-f40ec', '2021-08-20 17:34:00', 'test@gmail.com', NULL, 0, NULL, '3', 2, 1, '2021-08-20 17:34:00', '2021-08-31 00:00:00', NULL, 1),
 (15, '16c96-4e503-ea8ac-466f8-d7918', '2021-08-20 20:38:00', NULL, NULL, 1, NULL, NULL, NULL, 1, '2021-08-20 20:38:00', '2021-08-21 00:00:00', 1, NULL);
 
 -- --------------------------------------------------------
@@ -386,7 +386,9 @@ INSERT INTO `operations` (`operation_id`, `operation_type_id`, `company_token`, 
 (23, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:07:57'),
 (24, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:13:26'),
 (25, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:15:32'),
-(26, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:19:46');
+(26, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:19:46'),
+(27, 5, 'TEST08072021', 'SOLDE MOMO', 'eb2685f511609893', '1', 35000, 200, NULL),
+(28, 2, 'TEST08072021', 'RETRAIT NATIONAL', 'eb2685f511609893', '1', 35000, 200, NULL);
 
 -- --------------------------------------------------------
 
@@ -462,7 +464,8 @@ INSERT INTO `password_histories` (`history_id`, `logout_date`, `login_date`, `sc
 (24, NULL, '2021-08-24 03:43:56', '2021-08-31 03:43:56', NULL, NULL, 0, 3),
 (25, NULL, '2021-08-24 14:54:05', '2021-08-31 14:54:05', NULL, NULL, 0, 3),
 (26, NULL, '2021-08-26 11:45:42', '2021-09-02 11:45:42', NULL, NULL, 0, 3),
-(27, NULL, '2021-08-26 12:27:18', '2021-09-02 12:27:18', NULL, NULL, 0, 3);
+(27, NULL, '2021-08-26 12:27:18', '2021-09-02 12:27:18', NULL, NULL, 0, 3),
+(28, NULL, '2021-08-29 18:30:41', '2021-09-05 18:30:41', NULL, NULL, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -484,6 +487,36 @@ INSERT INTO `services` (`service_id`, `libelle`, `descriptions`) VALUES
 (1, 'Test10', 'Test desciption'),
 (2, 'Service 2', 'Test description service 2'),
 (3, 'Service 3', 'Test description service 3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sms_tracker`
+--
+
+CREATE TABLE `sms_tracker` (
+  `tracker_id` int NOT NULL,
+  `from_number` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `from_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT 'GEMO',
+  `to_phone_number` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `subject` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `content` mediumtext CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `delivery_flag` tinyint(1) NOT NULL DEFAULT '0',
+  `user_operation_id` int DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `last_attempt_date` datetime DEFAULT NULL,
+  `sms_sent_date` datetime DEFAULT NULL,
+  `category` varchar(100) NOT NULL DEFAULT 'TRACKING'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sms_tracker`
+--
+
+INSERT INTO `sms_tracker` (`tracker_id`, `from_number`, `from_name`, `to_phone_number`, `subject`, `content`, `delivery_flag`, `user_operation_id`, `creation_date`, `last_attempt_date`, `sms_sent_date`, `category`) VALUES
+(1, '61292948', 'GEMO', '94570130', 'APPLICATION', 'VOUS ACEZ FAIT UNE OPERATION', 0, NULL, '2021-08-29 08:12:37', NULL, NULL, 'TRACKING'),
+(2, '61292948', 'GEMO', '94570130', 'APPLICATION', 'VOUS ACEZ FAIT UNE OPERATION', 0, NULL, '2021-08-29 08:12:37', NULL, NULL, 'TRACKING'),
+(3, '61292948', 'GEMO', '94570130', 'APPLICATION', 'VOUS ACEZ FAIT UNE OPERATION', 0, NULL, '2021-08-29 08:12:37', NULL, NULL, 'TRACKING');
 
 -- --------------------------------------------------------
 
@@ -790,7 +823,8 @@ INSERT INTO `validate_password` (`validate_id`, `verify_code`, `created_date`, `
 (55, '14126', '2021-08-26 10:29:00', 0, 3),
 (56, '14896', '2021-08-26 10:42:00', 0, 3),
 (57, '13324', '2021-08-26 10:45:00', 1, 3),
-(58, '19472', '2021-08-26 11:27:00', 1, 3);
+(58, '19472', '2021-08-26 11:27:00', 1, 3),
+(59, '19532', '2021-08-29 17:30:00', 1, 2);
 
 --
 -- Indexes for dumped tables
@@ -895,6 +929,12 @@ ALTER TABLE `password_histories`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`service_id`);
+
+--
+-- Indexes for table `sms_tracker`
+--
+ALTER TABLE `sms_tracker`
+  ADD PRIMARY KEY (`tracker_id`);
 
 --
 -- Indexes for table `users`
@@ -1002,7 +1042,7 @@ ALTER TABLE `licence_types`
 -- AUTO_INCREMENT for table `operations`
 --
 ALTER TABLE `operations`
-  MODIFY `operation_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `operation_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `operation_types`
@@ -1014,13 +1054,19 @@ ALTER TABLE `operation_types`
 -- AUTO_INCREMENT for table `password_histories`
 --
 ALTER TABLE `password_histories`
-  MODIFY `history_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `history_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
   MODIFY `service_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `sms_tracker`
+--
+ALTER TABLE `sms_tracker`
+  MODIFY `tracker_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1044,7 +1090,7 @@ ALTER TABLE `user_operations`
 -- AUTO_INCREMENT for table `validate_password`
 --
 ALTER TABLE `validate_password`
-  MODIFY `validate_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `validate_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- Constraints for dumped tables
