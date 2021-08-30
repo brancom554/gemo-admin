@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 30, 2021 at 03:14 PM
+-- Generation Time: Aug 30, 2021 at 06:21 PM
 -- Server version: 8.0.23
 -- PHP Version: 7.4.15
 
@@ -245,21 +245,21 @@ CREATE TABLE `licences` (
 --
 
 INSERT INTO `licences` (`licence_id`, `licence_key`, `creation_date`, `created_by_email`, `licence_file_url`, `is_for_equipement_flag`, `application_uuid`, `data_version`, `created_for_company_id`, `is_active`, `activation_date`, `expiration_date`, `licence_parent_id`, `licence_type_id`) VALUES
-(1, '534c0-c4e21-265f5-c2282-54663', '2021-08-06 01:59:00', NULL, NULL, 1, '14455', NULL, 1, 1, '2021-08-11 00:00:00', '2021-08-31 00:00:00', 2, 1),
-(2, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, 1, 0, NULL, '2021-11-17 16:08:23', NULL, NULL),
+(1, '534c0-c4e21-265f5-c2282-54663', '2021-08-06 01:59:00', NULL, NULL, 1, '14455', NULL, 1, 1, '2021-08-11 00:00:00', '2021-08-31 00:00:00', 2, 2),
+(2, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, 1, 0, NULL, '2021-11-17 16:08:23', NULL, 2),
 (3, '264a86d7-a256-46e4-8296-83f6588fcdc8', '2021-08-11 18:35:26', 'test@test.com', NULL, 0, NULL, '1', 1, 0, NULL, '2021-09-10 18:37:36', NULL, 2),
 (4, '5b51f570-0488-4c2d-90cb-b6df2966a1e4', '2021-08-11 18:35:26', 'test@test.com', NULL, 1, '39f33214-b879-4495-b2b1-94bdb458da59', '1', 1, 1, '2021-08-23 00:00:00', '2021-11-17 16:08:30', 3, 2),
 (5, 'abcd-efgh-1234-0000', '2021-08-12 06:57:21', 'test@test.com', NULL, 1, '14455', '1', 1, 1, '2021-08-12 00:00:00', '2021-10-06 06:57:21', 3, 2),
 (6, 'dc8782dc-028d-11ec-9a03-0242ac130003', '2021-08-21 15:40:54', NULL, NULL, 0, '81197b11-a33c-42d5-bf29-24bff08a9c8c', '3', 2, 1, '2021-08-24 00:00:00', '2021-12-01 16:08:38', NULL, 2),
 (7, '404442ce-028e-11ec-9a03-0242ac130003', '2021-08-21 15:44:05', NULL, NULL, 1, 'ca4a2254-f92d-403e-b843-42483d24eaea', '3', 2, 1, '2021-08-26 00:00:00', '2021-12-09 16:09:02', 6, 2),
 (8, '534c0-c4e21-265f5-c2282-54663', '2021-08-06 01:59:00', NULL, NULL, 1, '1', NULL, 1, 1, '2021-08-12 19:23:00', '2021-08-31 00:00:00', NULL, 2),
-(9, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, NULL, 0, NULL, '2021-12-14 16:08:54', NULL, NULL),
-(10, '43778-4121e-897d7-7bcc3-5e867', '2021-08-09 19:40:00', NULL, NULL, 1, NULL, NULL, NULL, 1, NULL, '2021-08-26 00:00:00', NULL, NULL),
-(11, 'fa149-fd124-e8e75-e9a54-aa4f2', '2021-08-12 14:57:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 15:48:00', '2021-08-11 00:00:00', 1, NULL),
-(12, '2766b-9324c-25d9a-93c22-46e78', '2021-08-12 15:50:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 15:50:00', '2021-08-16 00:00:00', 0, NULL),
-(13, '3d0e8-44ec6-e023f-30795-dbd1d', '2021-08-12 19:24:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 19:24:00', '2021-08-19 00:00:00', 0, NULL),
-(14, '19deb-353f4-79808-a16e9-f40ec', '2021-08-20 17:34:00', 'test@gmail.com', NULL, 0, NULL, '3', 2, 1, '2021-08-20 17:34:00', '2021-08-31 00:00:00', NULL, 1),
-(15, '16c96-4e503-ea8ac-466f8-d7918', '2021-08-20 20:38:00', NULL, NULL, 1, NULL, NULL, NULL, 1, '2021-08-20 20:38:00', '2021-08-21 00:00:00', 1, NULL);
+(9, '986e8-784cc-4622a-980ab-54b77', '2021-08-06 10:45:00', NULL, NULL, 1, NULL, NULL, NULL, 0, NULL, '2021-12-14 16:08:54', NULL, 2),
+(10, '43778-4121e-897d7-7bcc3-5e867', '2021-08-09 19:40:00', NULL, NULL, 1, NULL, NULL, NULL, 1, NULL, '2021-08-26 00:00:00', NULL, 2),
+(11, 'fa149-fd124-e8e75-e9a54-aa4f2', '2021-08-12 14:57:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 15:48:00', '2021-08-11 00:00:00', 1, 2),
+(12, '2766b-9324c-25d9a-93c22-46e78', '2021-08-12 15:50:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 15:50:00', '2021-08-16 00:00:00', 0, 2),
+(13, '3d0e8-44ec6-e023f-30795-dbd1d', '2021-08-12 19:24:00', NULL, NULL, 1, NULL, NULL, 2, 1, '2021-08-12 19:24:00', '2021-08-19 00:00:00', 0, 2),
+(14, '19deb-353f4-79808-a16e9-f40ec', '2021-08-20 17:34:00', 'test@gmail.com', NULL, 0, NULL, '3', 2, 1, '2021-08-20 17:34:00', '2021-08-31 00:00:00', NULL, 2),
+(15, '16c96-4e503-ea8ac-466f8-d7918', '2021-08-20 20:38:00', NULL, NULL, 1, NULL, NULL, NULL, 1, '2021-08-20 20:38:00', '2021-08-21 00:00:00', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -334,9 +334,9 @@ CREATE TABLE `licence_types` (
 --
 
 INSERT INTO `licence_types` (`licence_type_id`, `licence_type_name`, `licence_nb_equipment`, `licence_nb_transactions_day`, `is_active`, `data_version`) VALUES
-(1, 'CLASSIC', 2, 10, 1, 1),
-(2, 'PREMIUM', 5, 15, 1, 1),
-(3, 'LIGHT', 1, 5, 1, 1);
+(1, 'CLASSIC', 2, 500, 1, 1),
+(2, 'PREMIUM', 15, 15000, 1, 1),
+(3, 'LIGHT', 1, 100, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -353,42 +353,43 @@ CREATE TABLE `operations` (
   `data_version` varchar(105) DEFAULT NULL,
   `balance_after_operate` int DEFAULT NULL COMMENT 'solde après operation',
   `amount` int DEFAULT NULL,
-  `operation_date` datetime DEFAULT NULL
+  `operation_date` datetime DEFAULT NULL,
+  `network_operator_name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `operations`
 --
 
-INSERT INTO `operations` (`operation_id`, `operation_type_id`, `company_token`, `libelle`, `application_uuid`, `data_version`, `balance_after_operate`, `amount`, `operation_date`) VALUES
-(1, 3, 'TEST08072021', '200F', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL),
-(2, 3, 'TEST08072021', '500F', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL),
-(3, 3, 'TEST08072021', '1000F', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL),
-(4, 5, 'TEST08072021', 'SOLDE', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL),
-(5, 5, 'TEST08072021', 'SOLDE MOMO', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL),
-(6, 2, 'TEST08072021', 'RETRAIT NATIONAL', NULL, '1', NULL, NULL, NULL),
-(7, 1, 'TEST08072021', 'Test16082021', '041750ce-e473-462c-af82-99567dc25b4b', '1', 250000, NULL, NULL),
-(8, 5, 'TEST08072021', 'SOLDE MOMO', 'eb2685f511609893', '1', 35000, 200, NULL),
-(9, 2, 'TEST08072021', 'RETRAIT NATIONAL', 'eb2685f511609893', '1', 35000, 200, NULL),
-(10, 3, NULL, 'retrait', 'appUuid', '1', 205000, 52000, '2021-08-15 21:18:20'),
-(11, 1, NULL, 'retrait', 'appUuid', '1', 205000, 52000, '2021-08-15 21:24:12'),
-(12, 2, NULL, 'depot', 'appUuid', '1', 200000, 5000, '2021-08-15 21:35:29'),
-(13, 2, NULL, 'depot', 'appUuid', '1', 200000, 5000, '2021-08-15 22:40:01'),
-(14, 2, NULL, 'depot', 'appUuid', '1', 200000, 5000, '2021-08-15 23:43:33'),
-(15, 3, NULL, 'credit', 'appUuid', '1', 12000, 250, '2021-08-15 23:58:06'),
-(16, 3, NULL, 'forfait', 'appUuid', '1', 8000, 300, '2021-08-16 00:00:39'),
-(17, 4, NULL, 'forfait', 'appUuid', '1', 85000, 3000, '2021-08-16 00:06:11'),
-(18, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 01:35:41'),
-(19, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 09:14:10'),
-(20, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 09:56:40'),
-(21, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 10:20:10'),
-(22, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 10:56:54'),
-(23, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:07:57'),
-(24, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:13:26'),
-(25, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:15:32'),
-(26, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:19:46'),
-(27, 5, 'TEST08072021', 'SOLDE MOMO', 'eb2685f511609893', '1', 35000, 200, NULL),
-(28, 2, 'TEST08072021', 'RETRAIT NATIONAL', 'eb2685f511609893', '1', 35000, 200, NULL);
+INSERT INTO `operations` (`operation_id`, `operation_type_id`, `company_token`, `libelle`, `application_uuid`, `data_version`, `balance_after_operate`, `amount`, `operation_date`, `network_operator_name`) VALUES
+(1, 3, 'TEST08072021', '200F', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL, NULL),
+(2, 3, 'TEST08072021', '500F', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL, NULL),
+(3, 3, 'TEST08072021', '1000F', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL, NULL),
+(4, 5, 'TEST08072021', 'SOLDE', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL, NULL),
+(5, 5, 'TEST08072021', 'SOLDE MOMO', '041750ce-e473-462c-af82-99567dc25b4b', '1', NULL, NULL, NULL, NULL),
+(6, 2, 'TEST08072021', 'RETRAIT NATIONAL', NULL, '1', NULL, NULL, NULL, NULL),
+(7, 1, 'TEST08072021', 'Test16082021', '041750ce-e473-462c-af82-99567dc25b4b', '1', 250000, NULL, NULL, NULL),
+(8, 5, 'TEST08072021', 'SOLDE MOMO', 'eb2685f511609893', '1', 35000, 200, NULL, NULL),
+(9, 2, 'TEST08072021', 'RETRAIT NATIONAL', 'eb2685f511609893', '1', 35000, 200, NULL, NULL),
+(10, 3, NULL, 'retrait', 'appUuid', '1', 205000, 52000, '2021-08-15 21:18:20', NULL),
+(11, 1, NULL, 'retrait', 'appUuid', '1', 205000, 52000, '2021-08-15 21:24:12', NULL),
+(12, 2, NULL, 'depot', 'appUuid', '1', 200000, 5000, '2021-08-15 21:35:29', NULL),
+(13, 2, NULL, 'depot', 'appUuid', '1', 200000, 5000, '2021-08-15 22:40:01', NULL),
+(14, 2, NULL, 'depot', 'appUuid', '1', 200000, 5000, '2021-08-15 23:43:33', NULL),
+(15, 3, NULL, 'credit', 'appUuid', '1', 12000, 250, '2021-08-15 23:58:06', NULL),
+(16, 3, NULL, 'forfait', 'appUuid', '1', 8000, 300, '2021-08-16 00:00:39', NULL),
+(17, 4, NULL, 'forfait', 'appUuid', '1', 85000, 3000, '2021-08-16 00:06:11', NULL),
+(18, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 01:35:41', NULL),
+(19, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 09:14:10', NULL),
+(20, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 09:56:40', NULL),
+(21, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 10:20:10', NULL),
+(22, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 10:56:54', NULL),
+(23, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:07:57', NULL),
+(24, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:13:26', NULL),
+(25, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:15:32', NULL),
+(26, 5, NULL, 'forfait internet', 'appUuid', '1', 85000, 3000, '2021-08-16 11:19:46', NULL),
+(27, 5, 'TEST08072021', 'SOLDE MOMO', 'eb2685f511609893', '1', 35000, 200, NULL, NULL),
+(28, 2, 'TEST08072021', 'RETRAIT NATIONAL', 'eb2685f511609893', '1', 35000, 200, NULL, NULL);
 
 -- --------------------------------------------------------
 
