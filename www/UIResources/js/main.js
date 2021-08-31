@@ -152,6 +152,45 @@ var ctx = document.getElementById('myChart2');
     $('#filter').on('keyup',function(){
         datatable.search(this.value).draw();
     });
+
+    var datatables = $('#tables').DataTable({
+        dom:'Bfrtip',
+        buttons:['excel','csv','pdf'],
+        "pageLength": 6,
+        "language":{
+            paginate:{
+                "first":"Premier",
+                "last":"Dernier",
+                "next":"Suivant",
+                "previous":"Antérieur"
+            }
+        },
+        'aoColumnDefs':[
+            {
+                'bSortable':true,
+                'aTargets':['nosort'],
+            }
+        ],
+       // columnDefs:[
+         //   {type:'date-dd-mm-yyyy',aTargets:[5]}
+       // ],
+        /*"aoColumns":[
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],*/
+        "order":true,
+        "bLengthChange": true,
+        
+    });
+
+    $('#filter').on('keyup',function(){
+        datatables.search(this.value).draw();
+    });
     
 })
 })(window.jQuery);

@@ -7,8 +7,18 @@
 	<title>GEMO - Gestion des Marchands Opérateurs</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta name="keywords" content="gemo">
-	<meta name="description" content="GEMO - Gestion des Marchands Opérateurs">
+	<meta name="description" content="GEMO - Gestion des Marchands Opérateurs. Faire une opération: Transfert d'argent · Retrait · Dépot. MOOV BENIN. MTN BENIN. vente de credit.Vente de forfait. Point journalier, mensuel et hebdomadaire. Gestion Point de vente mobile money, flooz money à Cotonou, à Parakou, à Porto-Novo. ">
+	<!--  Meta  -->
+	<link
+rel="canonical" href="https://moov-africa.bj/moov-money/" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="GEMO - Gestion des Marchands Opérateurs sur les réseaux MOOV BENIN et MTN BENIN" />
+<meta property="og:url" content="https://gemo.app" />
+<meta property="og:site_name" content="GEMO Gestion des Marchands Opérateurs BENIN" />
+	
 	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="<?php echo $iniObj->UIPath; ?>/img/favicon.png">
@@ -47,10 +57,10 @@
 	<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
 		<div class="container"> <a class="navbar-brand js-scroll" href="index-2.html">
 			<div style="width:150px" id="black">
-				<img src="<?php echo $iniObj->UIPath; ?>/logo" alt="Logo GEMO" srcset="">
+				<img src="<?php echo $iniObj->UIPath; ?>/logo.png" alt="Logo GEMO" srcset="">
 			</div>
 			<div style="width:250px" id="ligth">
-				<img src="<?php echo $iniObj->UIPath; ?>/logo_light" alt="Logo GEMO" srcset="">
+				<img src="<?php echo $iniObj->UIPath; ?>/logo_light.png" alt="Logo GEMO" srcset="">
 			</div> </a>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation"> <span></span>
 				<span></span>
@@ -70,7 +80,7 @@
 					</li>
 					<li class="nav-item"> <a class="nav-link js-scroll" href="#contact">Contact</a>
 					</li>
-					<li class="nav-item"> <a class="nav-link js-scroll btn btn-warning rounded-pill" href="<?php $lib->customerSite ?>/connecter">connexion</a>
+					<li class="nav-item"> <a class="nav-link js-scroll pd btn btn-blue rounded-pill" href="<?php $lib->customerSite ?>/connecter">connexion</a>
 					</li>
 				</ul>
 			</div>
@@ -85,7 +95,9 @@
 				<div class="col-12 col-md-7 col-lg-6">
 					<div class="text-left home-content z-index position-relative">
 						<h1>Solution de gestion des opérations marchandes</h1>
-						<p>GEMO, la solution unique dédiée pour une gestion rapide et facile des opérations marchandes (Vente de crédit, mobile money)</p> <a href="#0" class="button home-btn-1">Essai Gratuit</a>
+						<p>GEMO, la solution unique dédiée pour une gestion rapide et facile des opérations marchandes (Vente de crédit, mobile money)</p> 
+						<a href="#"data-toggle="modal" data-target="#exampleModal1" class="button home-btn-1">Essai Gratuit</a>
+						
 						<a href="#about" class="button home-btn-2 js-scroll">En savoir plus</a>
 					</div>
 				</div>
@@ -104,7 +116,71 @@
 		</div>
 	</header>
 	<!-- End Home Section -->
-	
+	<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="false" style="s-index:70">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-body">
+									<div class="col-md-12">
+										<div class="section-title">
+											<h6 class="small-title">Essai gratuit</h6>
+											<h2 style="text-transform: none;">Désirez-vous un essai gratuit ?</h2>
+										</div>
+									</div>
+									<div class="contact-area">
+										<div class="contact-form-box">
+										<form class="contact-form form" id="contact-form" action="" method="POST">
+											<div class="controls">
+												<div class="row">
+													<div class="col-lg-12 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_name" type="text" name="name" placeholder="Le nom de la société" required="required">
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_gerant" type="text" name="phone" placeholder="Le nom du gérant" required="required">
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_phone" type="text" name="subject" placeholder="Le numéro" required="required">
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_address" type="text" name="phone" placeholder="L'addresse du point de vente" required="required">
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_nombre" type="text" name="subject" placeholder="Nombre de téléphone	" required="required">
+														</div>
+													</div>
+													<div class="col-lg-12 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_ifu" type="text" name="phone" placeholder="Le numéro IFU" required="required">
+														</div>
+													</div>
+													<div class="col-lg-12 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_service" type="text" name="phone" placeholder="Les services" required="required">
+														</div>
+													</div>
+													
+													
+													<div class="col-md-12">
+														<button type="submit" class="button">Envoyer la demande</button>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
 	<!-- Start Features Section -->
 	<section id="features" class="features-area section-padding">
 		<div class="container">
@@ -112,7 +188,7 @@
 				<div class="col-lg-6 offset-lg-3 col-md-12">
 					<div class="section-title">
 						<h6 class="small-title">Les fonctionnalités</h6>
-						<h2>Appzone Smart Apps Has Lots Of Excellent Features</h2>
+						<h2 style="font-size:30px">GEMO la solution qui simplifie la vie des marchands GSM</h2>
 					</div>
 				</div>
 			</div>
@@ -201,7 +277,7 @@
 						</div>
 						<div class="features-text">
 							<h3>Exportation des données des transactions</h3>
-							<p>Precision haircut, optional hot lather and straight razor neck shave.</p>
+							<p>Les transactions peuvent être exportées en Excel ou PDF.</p>
 						</div>
 					</div>
 				</div>
@@ -280,55 +356,55 @@
 						<a href="#" data-toggle="modal" data-target="#exampleModal" class="button">Prenez un rendez-vous</a>
 						
 						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<div class="modal-body">
-								<div class="col-md-12">
-									<div class="section-title">
-										<h6 class="small-title">Rendez-vous</h6>
-										<h2>Prenez un rendez-vous</h2>
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-body">
+									<div class="col-md-12">
+										<div class="section-title">
+											<h6 class="small-title">Rendez-vous</h6>
+											<h2>Prenez un rendez-vous</h2>
+										</div>
 									</div>
-								</div>
-								<div class="contact-area">
-									<div class="contact-form-box">
-									<form class="contact-form form" id="contact-form" action="" method="POST">
-										<div class="controls">
-											<div class="row">
-												<div class="col-lg-12 col-md-12">
-													<div class="form-group has-error has-danger">
-														<input id="form_name" type="text" name="name" placeholder="Le nom de la société" required="required">
+									<div class="contact-area">
+										<div class="contact-form-box">
+										<form class="contact-form form" id="contact-form" action="" method="POST">
+											<div class="controls">
+												<div class="row">
+													<div class="col-lg-12 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_name" type="text" name="name" placeholder="Le nom de la société" required="required">
+														</div>
 													</div>
-												</div>
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group has-error has-danger">
-														<input id="form_gerant" type="text" name="phone" placeholder="Le nom du gérant" required="required">
+													<div class="col-lg-6 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_gerant" type="text" name="phone" placeholder="Le nom du gérant" required="required">
+														</div>
 													</div>
-												</div>
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group has-error has-danger">
-														<input id="form_phone" type="text" name="subject" placeholder="Le contact" required="required">
+													<div class="col-lg-6 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_phone" type="text" name="subject" placeholder="Le contact" required="required">
+														</div>
 													</div>
-												</div>
-												<div class="col-lg-12 col-md-12">
-													<div class="form-group has-error has-danger">
-														<input id="form_poste" type="text" name="phone" placeholder="Poste dans la société" required="required">
+													<div class="col-lg-12 col-md-12">
+														<div class="form-group has-error has-danger">
+															<input id="form_poste" type="text" name="phone" placeholder="Poste dans la société" required="required">
+														</div>
 													</div>
-												</div>
-												
-												
-												<div class="col-md-12">
-													<button type="submit" class="button">Envoyer le Message</button>
+													
+													
+													<div class="col-md-12">
+														<button type="submit" class="button">Envoyer le Message</button>
+													</div>
 												</div>
 											</div>
-										</div>
-									</form>
-								</div>
-								</div>
-								
+										</form>
+									</div>
+									</div>
+									
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 				<div class="col-lg-7 col-md-12">
@@ -347,8 +423,8 @@
 			<div class="row d-flex align-items-center">
 				<div class="col-lg-6 col-md-12">
 					<div class="video-info">
-						<h2>Appzone How it Works?</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<h2>Comment utilisé l'application GEMO?</h2>
+						<p>GEMO ,la solution qui simplifie la vie des marchands GSM.</p>
 					</div>
 				</div>
 				<div class="col-lg-6  col-md-12">
@@ -376,14 +452,15 @@
 						<div class="choose-content-info">
 							<h6 class="small-title">Pourquoi choisir GEMO?</h6> 
 							<h2>Service rapide et efficace</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud consectetur adipiscing elit.</p>
+							<p>Toutes les opérations marchandes (<i>vente de crédit & de forfait, transactions financières mobile money</i>) automatisées en une seule application sécurisée et intuitive pour permettre aux marchands de gérer plus facilement leur activité quotidienne.</p>
 						</div>
 						<div class="choose-feature-box">
 							<div class="choose-single-feature">
-								<div class="choose-features-icon color-icon-1"><i class="icofont-atom"></i>
+								<div class="choose-features-icon color-icon-1">
+									<img src="<?php echo $iniObj->UIPath; ?>/img/trans.png" style="width:40px" alt="">
 								</div>
 								<div class="choose-features-info">
-									<h3>Augmentez votre commission,vos clients et soyez plus productif.</h3>
+									<h3>Augmenter votre commission et devenez plus productif.</h3>
 								</div>
 							</div>
 							<div class="choose-single-feature">
@@ -415,7 +492,7 @@
 				<div class="col-sm-12">
 					<div class="section-title">
 						<h6 class="small-title">Les interfaces</h6>
-						<h2>De très beaux interfaces</h2>
+						<h2>Simple & intuitif</h2>
 					</div>
 				</div>
 			</div>
@@ -727,7 +804,7 @@
 			<div class="row d-flex align-items-center">
 				<div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
 					<div class="download-app-text">
-						<h5>Essai gratuit</h5>
+						<h5>Rejoignez la communauté GEMO</h5>
 						<h2>Télécharger gratuitement l'application GEMO </h2>
 						<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>-->
 						<div class="download-button-wrapper">
@@ -768,8 +845,8 @@
 								<div class="single-contact-info-box">
 									<div class="contact-info">	<i class="icofont-location-pin"></i>
 										<h6>Address:</h6>
-										<p>526 Melrose Street,</p>
-										<p>Water Mill, 11976 New York.</p>
+										<p>Cotonou,</p>
+										<p>Bénin.</p>
 									</div>
 									<div class="contact-info-bg-icon">	<i class="icofont-location-pin"></i>
 									</div>
@@ -778,9 +855,9 @@
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="single-contact-info-box">
 									<div class="contact-info">	<i class="icofont-phone-circle"></i>
-										<h6>Phone:</h6>
-										<p>+080 707 555-321</p>
-										<p>+105 773 321 7775</p>
+										<h6>Téléphone:</h6>
+										<p>+229 91 96 11 11</p>
+										
 									</div>
 									<div class="contact-info-bg-icon">	<i class="icofont-phone-circle"></i>
 									</div>
@@ -790,8 +867,8 @@
 								<div class="single-contact-info-box">
 									<div class="contact-info">	<i class="icofont-email"></i>
 										<h6>Email:</h6>
-										<p>commercial@gemo.app</p>
-										<p>support@example.com</p>
+										<p style="text-transform: none;">commercial@gemo.app</p>
+										
 									</div>
 									<div class="contact-info-bg-icon">	<i class="icofont-email"></i>
 									</div>

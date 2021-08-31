@@ -456,8 +456,10 @@ main {
   margin-bottom: 1.5rem; }
 
 .activity-grid {
-  display: grid;
-  grid-template-columns: 70% 27.5%;
+  /*display: grid;
+  grid-template-columns: 70% 27.5%;*/
+  display: flex;
+  justify-content: space-between;
   grid-column-gap: 1.5rem; }
 
 #form-research {

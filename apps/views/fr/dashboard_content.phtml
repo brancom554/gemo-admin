@@ -51,7 +51,7 @@
                         
                         <!--<div id="chartContainer2" style="height: 370px; max-width: 920px; margin: 0px auto;"></div> -->
                     </div>
-                    <div class="card-single">
+                    <div class="card-single response-card">
                     <div class="card-single-header" style="align-items: center;">
                         <span>Les dernières transactions</span>
                         <a href="<?php $lib->customerSite ?>/operation/historique" class="btn btn-orange">Plus</a>
@@ -67,18 +67,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>DEPOT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>FORFAIT INTERNET</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>RETRAIT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
+                            <?php if(!empty($data['operations'])): ?>
+                                    <?php foreach($data['operations'] as $operation): ?>
+                                        <tr>
+                                            <td scope="row"><?=$operation['libelle'] ?></td>
+                                            <td><?=$operation['operation_date'] ?></td>
+                                            <td><?=$operation['descriptions'] ?></td>
+                                            <td>MTN</td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <tr>
+                                        <td colspan="4">
+                                            Pas de données
+                                        </td>
+                                    </tr>
+                                <?php endif; ?>
                             </tbody>
                         </table>
                     </div>

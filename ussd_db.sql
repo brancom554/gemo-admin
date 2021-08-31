@@ -556,7 +556,9 @@ INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `email`, `phone_number`
 (3, 'dko1', 'dko2', 'testdko579@gmail.com', '96209396', '$2y$10$IZryQVV0Fs4NncH.9xbMq..xhC9OTay24CJDGMQFUxr3yYRyPyMZy', '1629560315', '2021-08-21 15:38:16', NULL, 2, 2, 1, '2021-08-16', NULL, NULL, 'DKO', NULL, '3'),
 (4, 'AROUNA', 'Hafiz', 'test@test.com', '66152976', '$2y$10$W7ZXm7yyKpQbqEFEBY9BWu9BTSYZp76ycsSXLaneT5nrKc4.4Z.PG', '0cbc6611f5540bd0809a388dc95a615b', '2021-08-16 21:21:00', NULL, 1, 1, 1, '2021-08-16', '2021-08-27', 1, 'TEST08072021', NULL, '1'),
 (5, 'BAKARI', 'Mariama So Arouna', '', '0666265571', '$2y$10$/nssyIy7Z7OqAdNFj06K8urvevEk6gB3n0CxgX.kDOsqs..y/1XJi', '0cbc6611f5540bd0809a388dc95a615b', '2021-08-17 18:46:00', NULL, 1, 2, 1, '2021-08-17', '2021-08-20', 2, 'DKO', NULL, '1'),
-(6, 'TESTEUR ', 'test 2', 'test@test.com', '95876741', '$2y$10$gLnN28KkbEW..QfQYe0Oee.07x9kiRgVyitV0N79fs2fai1eddTkS', '0cbc6611f5540bd0809a388dc95a615b', '2021-08-20 17:30:00', NULL, 2, 2, 1, '2021-08-20', '2021-08-31', 1, 'DKO', '041750ce-e473-462c-af82-99567dc25b4c', '1');
+(6, 'ALI-YERIMA', 'Pierrick', '', '97494848', '$2y$10$/nssyIy7Z7OqAdNFj06K8urvevEk6gB3n0CxgX.kDOsqs..y/1XJi', '0cbc6611f5540bd0809a388dc95a615b', '2021-08-17 18:46:00', NULL, 1, 2, 1, '2021-08-17', '2021-08-20', 2, 'DKO', NULL, '1'),
+(7, 'GANHOUEGNON', 'Marius', '', '94570130', '$2y$10$/nssyIy7Z7OqAdNFj06K8urvevEk6gB3n0CxgX.kDOsqs..y/1XJi', '0cbc6611f5540bd0809a388dc95a615b', '2021-08-17 18:46:00', NULL, 1, 2, 1, '2021-08-17', '2021-08-20', 2, 'DKO', NULL, '1'),
+(8, 'TESTEUR ', 'test 2', 'test@test.com', '95876741', '$2y$10$gLnN28KkbEW..QfQYe0Oee.07x9kiRgVyitV0N79fs2fai1eddTkS', '0cbc6611f5540bd0809a388dc95a615b', '2021-08-20 17:30:00', NULL, 2, 2, 1, '2021-08-20', '2021-08-31', 1, 'DKO', '041750ce-e473-462c-af82-99567dc25b4c', '1');
 
 -- --------------------------------------------------------
 

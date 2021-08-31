@@ -28,11 +28,12 @@ if (isset($_POST['soumettre'])) {
     $date = new DateTime();
     $db = new Database();
     $conn = $db->connectDb();
-    $r = $conn->prepare('INSERT INTO licences (licence_key,creation_date,is_for_equipement_flag,created_for_company_id,is_active,activation_date,expiration_date,licence_type_id) VALUES (?,?,?,?,?,?,?,?)');
+    $r = $conn->prepare('INSERT INTO licences (licence_key,creation_date,is_for_equipement_flag,application_uuid,created_for_company_id,is_active,activation_date,expiration_date,licence_type_id) VALUES (?,?,?,?,?,?,?,?,?)');
     $r->execute([
         $_POST['licence_key'],
         $date->format('y-m-d H:i'),
         $equipement,
+        $_POST['application_uuid'],
         $_POST['societe'],
         $actif,
         $date_activ,

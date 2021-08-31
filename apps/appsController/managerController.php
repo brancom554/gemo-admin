@@ -4,8 +4,8 @@
         case "ajouter":
             include "addManager.php";
             break;	
-        case "modifier":
-            include "modifier.php";
+        case "password":
+            include "editPassword.php";
             break;
         
         default:

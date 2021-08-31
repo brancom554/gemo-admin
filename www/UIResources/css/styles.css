@@ -1,39 +1,7 @@
-/*******************************************************
-    Template Name    : Appzone - App Landing Page Template
-    Author           : Cute Themes
-    Version          : 1.0
-    Created          : 2021
-    File Description : Main css file of the template
-*******************************************************/
-
-/**************************************
-    -- Css Table of Content
-    01.Generale Style
-    02.Preloader Area Style
-    03.Navber Area Style
-    04.Home Section Style
-    05.Feature Section Style
-    06.Counter Section Style
-    07.About Section Style
-    08.Video Section Style
-    09.Choose Us Section Style
-    10.Screenshort Section Style
-    11.Testimonial Section Style
-    12.Faq Section Style
-    13.Team Section Style
-    14.Downloade Section Style
-    15.Contact Section Style
-    16.Footer Section Style
- *************************************/
- 
-/**************************************
- * 01. Generale Style
- *************************************/
-
 body {
 	background: #ffffff;
 	color: #333;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 24px;
@@ -90,7 +58,7 @@ p {
 	color: #555;
 	font-weight: 400;
 	line-height: 26px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 .z-index {
@@ -138,7 +106,7 @@ button:focus {
 	border: 0;
 	border-radius: 35px;
 	color: #fff;
-	background: #ffac64;
+	background: #00a8f0;
     /*background: linear-gradient( 65deg, #FF4D79 0, #FF809F 100%)*/;
 	transition: all 500ms ease;
 	cursor: pointer;
@@ -147,12 +115,12 @@ button:focus {
 	overflow: hidden;
 	white-space: nowrap;
     transition: background .5s ease;
-    box-shadow: 0px 3px 10px -3px #ffac64;
+    box-shadow: 0px 3px 10px -3px #00a8f0;
 }
 
 .button:hover {
     color: #fff;
-    box-shadow: 0px 5px 25px -3px #ffac64;
+    box-shadow: 0px 5px 25px -3px #00a8f0;
 }
 
 dl, ol, ul {
@@ -331,7 +299,7 @@ dl, ol, ul {
     width: 8px;
     height: 8px;
     margin: 0 3px;
-    background: #ff678c;
+    background: #FFAC64;
     border-radius: 30px;
 	
 }
@@ -339,7 +307,7 @@ dl, ol, ul {
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
 	background: transparent;
-	border: 2px solid #ff678c;
+	border: 2px solid #FFAC64;
 	-webkit-box-shadow: 0 1px 5px #fff;
     box-shadow: 0 1px 5px #fff;
 }
@@ -373,7 +341,7 @@ dl, ol, ul {
 .dot2 {
     width: 60%;
     height: 60%;
-    background-color: #ff678c;
+    background-color: #FFAC64;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -452,7 +420,7 @@ dl, ol, ul {
 	font-weight: 500;
 	font-size: 15px;
 	letter-spacing: 0.7px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 .navbar-b.navbar-trans .nav-link:hover, .navbar-b.navbar-reduce .nav-link:hover {
@@ -498,7 +466,7 @@ dl, ol, ul {
 	color: #fff;
 	font-size: 1.6rem;
 	font-weight: 700;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu, .navbar-b .dropdown.show .dropdown-menu, .navbar-b .dropdown-btn.show .dropdown-menu {
@@ -518,13 +486,13 @@ dl, ol, ul {
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-	background-color: #ff678c;
+	background-color: #FFAC64;
 	color: #fff;
 	transition: all 500ms ease;
 }
 
 .navbar-b .dropdown-menu .dropdown-item.active {
-	background-color: #ff678c;
+	background-color: #FFAC64;
 }
 
 .navbar-toggler {
@@ -616,7 +584,17 @@ dl, ol, ul {
 	width: 100%;
 	opacity: 1;
 	z-index: -1;
-    background-image: linear-gradient(45deg,#ff348a 0,#f97669 50%,#ff9f20 110%);
+    /*background-image: linear-gradient(45deg,#ff348a 0,#f97669 50%,#ff9f20 110%);*/
+	background-image: linear-gradient(45deg,#F49F84 0,#ED4800 50%,#FAC404 110%)
+}
+
+.pd{
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
+}
+
+.navbar-b.navbar-reduce .btn-blue{
+	color: #fff;
 }
 
 .svg-shape-bottom .bottom-shape {
@@ -718,6 +696,7 @@ dl, ol, ul {
 	-webkit-transition: all .3s;
     transition: all .3s;
     will-change: transform;
+	height:350px
 }
 
 .single-features-item:hover {
@@ -735,6 +714,11 @@ dl, ol, ul {
     border-radius: 50%;
     box-shadow: 0 1px 6px rgb(150, 150, 150, 0.35);
     margin-bottom: 20px;
+}
+
+.btn-blue{
+	background: #00a8f0 !important;
+	border-color: #00a8f0 !important;
 }
 
 .features-icon i {
@@ -897,8 +881,8 @@ dl, ol, ul {
 	width: 100%;
 	opacity: .9;
 	z-index: -1;
-	background: #4923d8;
-	background: linear-gradient(to right, #8830d0, #4923d8);
+	background: #00a8f0;
+	/*background: linear-gradient(to right, #8830d0, #4923d8);*/
 }
 
 .video-info h2 {
@@ -1368,7 +1352,7 @@ dl, ol, ul {
 	position: relative;
 	color: #fff;
 	text-align: center;
-	background: url(../img/download-bg.jpg);
+	background: url(../assets/img/download-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -1385,8 +1369,8 @@ dl, ol, ul {
 	width: 100%;
 	opacity: .8;
 	z-index: -1;
-	background: #4923d8;
-	background: linear-gradient(to right, #8830d0, #4923d8);
+	/*background: #4923d8;
+	background: linear-gradient(to right, #8830d0, #4923d8);*/
 }
 
 .download-app-text {

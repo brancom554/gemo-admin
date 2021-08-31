@@ -1,4 +1,10 @@
 <main>
+    <?php if(!empty($_SESSION['notification'])):?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?=$_SESSION['notification']?>
+            <!--<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>-->
+            </div>
+        <?php endif;?>
             <h2 class="main-title">Managers</h2>
             <div class="track">
                 <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $url_array[2];?></span>
@@ -48,9 +54,9 @@
                                                   <?php endif; ?>
                                                 </td>
                                                 <td style="display:flex">
-                                                    <span class="btn-action white pg-5 success">Activer</span>
-                                                    <span class="btn-action white pg-5 danger">Bloquer</span>
-                                                    <span class="btn-action white pg-5 primary">Modifier</span>
+                                                    <span onclick="document.location='<?php $lib->customerSite ?>/super/manager/activer/<?=$manager['user_id']?>'" class="btn-action white pg-5 cursor success">Activer</span>
+                                                    <span onclick="document.location='<?php $lib->customerSite ?>/super/manager/bloquer/<?=$manager['user_id']?>'" class="btn-action white pg-5 cursor danger">Bloquer</span>
+                                                    <span onclick="document.location='<?php $lib->customerSite ?>/super/manager/password/<?=$manager['user_id']?>'" class="btn-action white pg-5 cursor primary">Modifier le mot de passe</span>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
