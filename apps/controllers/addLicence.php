@@ -40,7 +40,7 @@ if (isset($_POST['soumettre'])) {
         $date_expiration,
         $_POST['licence_type']
     ]);
-    $licence_id = (int)$conn->lastInsertId();
+    /*$licence_id = (int)$conn->lastInsertId();
     $sql ='INSERT INTO licence_features (licence_feature_id,licence_id) VALUES (?,?)';
     $query = $conn->prepare($sql);
     foreach($_POST['services'] as $service){
@@ -48,7 +48,7 @@ if (isset($_POST['soumettre'])) {
         if (!$query->execute([$service_id,$licence_id])) {
             var_dump($query->errorInfo());
         }
-    }
+    }*/
     header('Location:/super/licence');
     exit;
 }
