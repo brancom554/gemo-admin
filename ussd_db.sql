@@ -276,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `licence_features` (
   `data_version` varchar(105) DEFAULT NULL,
   PRIMARY KEY (`licence_feature_id`,`licence_id`,`service_id`) USING BTREE,
   KEY `fk_licence_features_licences_idx` (`licence_id`)
-) ENGINE=InnoDB AUTO_INCREMENT= DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `licence_features`
