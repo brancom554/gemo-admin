@@ -33,12 +33,17 @@ if (isset($_POST['soumettre'])) {
         $url_array[4]
     ]);
     $licence_id = (int)$conn->lastInsertId();
-    $sql ='INSERT INTO licence_features (licence_feature_id,licence_id) VALUES (?,?)';
+    $sql = 'INSERT INTO licence_features (licence_id ,service_id) VALUES (:licence,:service)';
     $query = $conn->prepare($sql);
     foreach($_POST['services'] as $service){
         $service_id = (int)$service;
-        if (!$query->execute([$service_id,$licence_id])) {
-            var_dump($query->errorInfo());
+        $data=[
+            'licence'=> $licence_id,
+            'service' => $service_id
+        ];
+        $statut = $db->InsertDb($sql,$data);
+        if (!$statut) {
+            var_dump($statut);
         }
     }
     header('Location:/super/licence/secondaire/'.$url_array[4]);

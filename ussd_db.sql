@@ -267,15 +267,16 @@ INSERT INTO `licences` (`licence_id`, `licence_key`, `creation_date`, `created_b
 -- Table structure for table `licence_features`
 --
 
-CREATE TABLE `licence_features` (
-  `licence_feature_id` int NOT NULL,
-  `description` varchar(100) DEFAULT NULL,
-  `libelle` varchar(150) DEFAULT NULL,
-  `licence_id` int NOT NULL,
+CREATE TABLE IF NOT EXISTS `licence_features` (
+  `licence_feature_id` int(11) NOT NULL AUTO_INCREMENT,
+  `licence_id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
   `company_token` varchar(105) DEFAULT NULL,
   `application_uuid` varchar(105) DEFAULT NULL,
-  `data_version` varchar(105) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `data_version` varchar(105) DEFAULT NULL,
+  PRIMARY KEY (`licence_feature_id`,`licence_id`,`service_id`) USING BTREE,
+  KEY `fk_licence_features_licences_idx` (`licence_id`)
+) ENGINE=InnoDB AUTO_INCREMENT= DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `licence_features`
@@ -900,9 +901,10 @@ ALTER TABLE `licences`
 --
 -- Indexes for table `licence_features`
 --
+
 ALTER TABLE `licence_features`
-  ADD PRIMARY KEY (`licence_feature_id`),
-  ADD KEY `fk_licence_features_licences_idx` (`licence_id`);
+  ADD CONSTRAINT `fk_licence_features_licences` FOREIGN KEY (`licence_id`) REFERENCES `licences` (`licence_id`);
+  ADD CONSTRAINT `fk_licence_features_services` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`);
 
 --
 -- Indexes for table `licence_types`
@@ -1032,11 +1034,6 @@ ALTER TABLE `inventory_detail`
 ALTER TABLE `licences`
   MODIFY `licence_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
---
--- AUTO_INCREMENT for table `licence_features`
---
-ALTER TABLE `licence_features`
-  MODIFY `licence_feature_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `licence_types`
@@ -1132,8 +1129,7 @@ ALTER TABLE `licences`
 --
 -- Constraints for table `licence_features`
 --
-ALTER TABLE `licence_features`
-  ADD CONSTRAINT `fk_licence_features_licences` FOREIGN KEY (`licence_id`) REFERENCES `licences` (`licence_id`);
+
 
 --
 -- Constraints for table `operations`
