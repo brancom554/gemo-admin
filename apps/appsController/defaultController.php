@@ -9,6 +9,9 @@ switch ($page_requested) {
 		break;
 	case "administration":
 		switch ($param2[0]) {
+			case "utilisateurs":
+				include "userManagerController.php";
+				break;
 			case "inventaire":
 				include "inventaire.php";
 				break;	
