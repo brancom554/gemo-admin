@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : lun. 06 sep. 2021 à 17:28
--- Version du serveur :  8.0.17
--- Version de PHP : 7.4.8
+-- Host: localhost
+-- Generation Time: Sep 12, 2021 at 12:54 PM
+-- Server version: 8.0.17
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `ussd_db`
+-- Database: `ussd_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `addresses`
+-- Table structure for table `addresses`
 --
 
 CREATE TABLE `addresses` (
@@ -42,7 +42,7 @@ CREATE TABLE `addresses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `addresses`
+-- Dumping data for table `addresses`
 --
 
 INSERT INTO `addresses` (`address_id`, `postal_address`, `postal_code`, `creation_date`, `updated_date`, `city`, `company_id`, `country_id`, `company_token`, `application_uuid`, `data_version`) VALUES
@@ -52,7 +52,7 @@ INSERT INTO `addresses` (`address_id`, `postal_address`, `postal_code`, `creatio
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -65,7 +65,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`category_id`, `libelle`, `creation_date`, `type_category`, `type_category_libelle`, `data_version`) VALUES
@@ -83,7 +83,7 @@ INSERT INTO `categories` (`category_id`, `libelle`, `creation_date`, `type_categ
 -- --------------------------------------------------------
 
 --
--- Structure de la table `category_ussd`
+-- Table structure for table `category_ussd`
 --
 
 CREATE TABLE `category_ussd` (
@@ -99,7 +99,7 @@ CREATE TABLE `category_ussd` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `category_ussd`
+-- Dumping data for table `category_ussd`
 --
 
 INSERT INTO `category_ussd` (`category_ussd_id`, `ussd_code`, `category_id`, `operation_type_id`, `company_token`, `application_uuid`, `data_version`, `network_operator_number`, `network_operator_name`) VALUES
@@ -120,7 +120,7 @@ INSERT INTO `category_ussd` (`category_ussd_id`, `ussd_code`, `category_id`, `op
 -- --------------------------------------------------------
 
 --
--- Structure de la table `companies`
+-- Table structure for table `companies`
 --
 
 CREATE TABLE `companies` (
@@ -135,7 +135,7 @@ CREATE TABLE `companies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `companies`
+-- Dumping data for table `companies`
 --
 
 INSERT INTO `companies` (`company_id`, `company_number`, `company_name`, `creation_date`, `company_token`, `registration_number`, `application_uuid`, `data_version`) VALUES
@@ -145,7 +145,7 @@ INSERT INTO `companies` (`company_id`, `company_number`, `company_name`, `creati
 -- --------------------------------------------------------
 
 --
--- Structure de la table `countries`
+-- Table structure for table `countries`
 --
 
 CREATE TABLE `countries` (
@@ -157,7 +157,7 @@ CREATE TABLE `countries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `countries`
+-- Dumping data for table `countries`
 --
 
 INSERT INTO `countries` (`country_id`, `description`, `country_short_name`, `creation_date`, `data_version`) VALUES
@@ -167,7 +167,7 @@ INSERT INTO `countries` (`country_id`, `description`, `country_short_name`, `cre
 -- --------------------------------------------------------
 
 --
--- Structure de la table `database_version`
+-- Table structure for table `database_version`
 --
 
 CREATE TABLE `database_version` (
@@ -177,7 +177,7 @@ CREATE TABLE `database_version` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `database_version`
+-- Dumping data for table `database_version`
 --
 
 INSERT INTO `database_version` (`database_version_id`, `current_version`, `last_update_date`) VALUES
@@ -186,7 +186,7 @@ INSERT INTO `database_version` (`database_version_id`, `current_version`, `last_
 -- --------------------------------------------------------
 
 --
--- Structure de la table `inventories`
+-- Table structure for table `inventories`
 --
 
 CREATE TABLE `inventories` (
@@ -204,7 +204,7 @@ CREATE TABLE `inventories` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `inventory_detail`
+-- Table structure for table `inventory_detail`
 --
 
 CREATE TABLE `inventory_detail` (
@@ -220,7 +220,7 @@ CREATE TABLE `inventory_detail` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `licences`
+-- Table structure for table `licences`
 --
 
 CREATE TABLE `licences` (
@@ -241,7 +241,7 @@ CREATE TABLE `licences` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `licences`
+-- Dumping data for table `licences`
 --
 
 INSERT INTO `licences` (`licence_id`, `licence_key`, `creation_date`, `created_by_email`, `licence_file_url`, `is_for_equipement_flag`, `application_uuid`, `data_version`, `created_for_company_id`, `is_active`, `activation_date`, `expiration_date`, `licence_parent_id`, `licence_type_id`) VALUES
@@ -280,7 +280,7 @@ INSERT INTO `licences` (`licence_id`, `licence_key`, `creation_date`, `created_b
 -- --------------------------------------------------------
 
 --
--- Structure de la table `licence_features`
+-- Table structure for table `licence_features`
 --
 
 CREATE TABLE `licence_features` (
@@ -293,7 +293,7 @@ CREATE TABLE `licence_features` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `licence_features`
+-- Dumping data for table `licence_features`
 --
 
 INSERT INTO `licence_features` (`licence_feature_id`, `licence_id`, `service_id`, `company_token`, `application_uuid`, `data_version`) VALUES
@@ -303,7 +303,7 @@ INSERT INTO `licence_features` (`licence_feature_id`, `licence_id`, `service_id`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `licence_types`
+-- Table structure for table `licence_types`
 --
 
 CREATE TABLE `licence_types` (
@@ -316,7 +316,7 @@ CREATE TABLE `licence_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `licence_types`
+-- Dumping data for table `licence_types`
 --
 
 INSERT INTO `licence_types` (`licence_type_id`, `licence_type_name`, `licence_nb_equipment`, `licence_nb_transactions_day`, `is_active`, `data_version`) VALUES
@@ -327,7 +327,7 @@ INSERT INTO `licence_types` (`licence_type_id`, `licence_type_name`, `licence_nb
 -- --------------------------------------------------------
 
 --
--- Structure de la table `operations`
+-- Table structure for table `operations`
 --
 
 CREATE TABLE `operations` (
@@ -344,7 +344,7 @@ CREATE TABLE `operations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `operations`
+-- Dumping data for table `operations`
 --
 
 INSERT INTO `operations` (`operation_id`, `operation_type_id`, `company_token`, `libelle`, `application_uuid`, `data_version`, `balance_after_operate`, `amount`, `operation_date`, `network_operator_name`) VALUES
@@ -380,7 +380,7 @@ INSERT INTO `operations` (`operation_id`, `operation_type_id`, `company_token`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `operation_types`
+-- Table structure for table `operation_types`
 --
 
 CREATE TABLE `operation_types` (
@@ -392,7 +392,7 @@ CREATE TABLE `operation_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `operation_types`
+-- Dumping data for table `operation_types`
 --
 
 INSERT INTO `operation_types` (`operation_type_id`, `libelle`, `creation_date`, `comments`, `data_version`) VALUES
@@ -408,7 +408,7 @@ INSERT INTO `operation_types` (`operation_type_id`, `libelle`, `creation_date`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `password_histories`
+-- Table structure for table `password_histories`
 --
 
 CREATE TABLE `password_histories` (
@@ -423,7 +423,7 @@ CREATE TABLE `password_histories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `password_histories`
+-- Dumping data for table `password_histories`
 --
 
 INSERT INTO `password_histories` (`history_id`, `logout_date`, `login_date`, `schedule_reset_date`, `effective_reset_date`, `next_reset_date`, `is_effective`, `user_id`) VALUES
@@ -457,7 +457,7 @@ INSERT INTO `password_histories` (`history_id`, `logout_date`, `login_date`, `sc
 -- --------------------------------------------------------
 
 --
--- Structure de la table `services`
+-- Table structure for table `services`
 --
 
 CREATE TABLE `services` (
@@ -467,7 +467,7 @@ CREATE TABLE `services` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `services`
+-- Dumping data for table `services`
 --
 
 INSERT INTO `services` (`service_id`, `libelle`, `descriptions`) VALUES
@@ -478,7 +478,7 @@ INSERT INTO `services` (`service_id`, `libelle`, `descriptions`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `sms_tracker`
+-- Table structure for table `sms_tracker`
 --
 
 CREATE TABLE `sms_tracker` (
@@ -497,7 +497,7 @@ CREATE TABLE `sms_tracker` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `sms_tracker`
+-- Dumping data for table `sms_tracker`
 --
 
 INSERT INTO `sms_tracker` (`tracker_id`, `from_number`, `from_name`, `to_phone_number`, `subject`, `content`, `delivery_flag`, `user_operation_id`, `creation_date`, `last_attempt_date`, `sms_sent_date`, `category`) VALUES
@@ -508,7 +508,7 @@ INSERT INTO `sms_tracker` (`tracker_id`, `from_number`, `from_name`, `to_phone_n
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -534,7 +534,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `email`, `phone_number`, `encrypted_password`, `hash`, `creation_date`, `last_update_date`, `address_id`, `company_id`, `is_active_flag`, `active_date_from`, `active_date_to`, `is_manager`, `company_token`, `application_uuid`, `data_version`, `licence_id`) VALUES
@@ -548,7 +548,7 @@ INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `email`, `phone_number`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user_connections`
+-- Table structure for table `user_connections`
 --
 
 CREATE TABLE `user_connections` (
@@ -561,7 +561,7 @@ CREATE TABLE `user_connections` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `user_connections`
+-- Dumping data for table `user_connections`
 --
 
 INSERT INTO `user_connections` (`connection_id`, `user_id`, `application_uuid`, `connection_date`, `sheduled_deconnection_date`, `deconnection_date`) VALUES
@@ -570,7 +570,7 @@ INSERT INTO `user_connections` (`connection_id`, `user_id`, `application_uuid`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user_has_features`
+-- Table structure for table `user_has_features`
 --
 
 CREATE TABLE `user_has_features` (
@@ -586,7 +586,7 @@ CREATE TABLE `user_has_features` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `user_has_features`
+-- Dumping data for table `user_has_features`
 --
 
 INSERT INTO `user_has_features` (`user_has_licence_id`, `licence_activation_date`, `licence_feature_id`, `user_id`, `company_token`, `active_date_from`, `active_date_to`, `application_uuid`, `data_version`) VALUES
@@ -731,7 +731,7 @@ INSERT INTO `user_has_features` (`user_has_licence_id`, `licence_activation_date
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user_operations`
+-- Table structure for table `user_operations`
 --
 
 CREATE TABLE `user_operations` (
@@ -746,7 +746,7 @@ CREATE TABLE `user_operations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `user_operations`
+-- Dumping data for table `user_operations`
 --
 
 INSERT INTO `user_operations` (`user_operation_id`, `operation_date`, `created_by_user_id`, `operation_id`, `company_token`, `inventory_id`, `application_uuid`, `data_version`) VALUES
@@ -760,7 +760,7 @@ INSERT INTO `user_operations` (`user_operation_id`, `operation_date`, `created_b
 -- --------------------------------------------------------
 
 --
--- Structure de la table `validate_password`
+-- Table structure for table `validate_password`
 --
 
 CREATE TABLE `validate_password` (
@@ -772,7 +772,7 @@ CREATE TABLE `validate_password` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `validate_password`
+-- Dumping data for table `validate_password`
 --
 
 INSERT INTO `validate_password` (`validate_id`, `verify_code`, `created_date`, `is_used`, `user_id`) VALUES
@@ -837,11 +837,11 @@ INSERT INTO `validate_password` (`validate_id`, `verify_code`, `created_date`, `
 (59, '19532', '2021-08-29 17:30:00', 1, 2);
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `addresses`
+-- Indexes for table `addresses`
 --
 ALTER TABLE `addresses`
   ADD PRIMARY KEY (`address_id`),
@@ -849,13 +849,13 @@ ALTER TABLE `addresses`
   ADD KEY `fk_addresses_countries1_idx` (`country_id`);
 
 --
--- Index pour la table `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Index pour la table `category_ussd`
+-- Indexes for table `category_ussd`
 --
 ALTER TABLE `category_ussd`
   ADD PRIMARY KEY (`category_ussd_id`),
@@ -863,31 +863,31 @@ ALTER TABLE `category_ussd`
   ADD KEY `fk_category_ussd_operation_types1_idx` (`operation_type_id`);
 
 --
--- Index pour la table `companies`
+-- Indexes for table `companies`
 --
 ALTER TABLE `companies`
   ADD PRIMARY KEY (`company_id`);
 
 --
--- Index pour la table `countries`
+-- Indexes for table `countries`
 --
 ALTER TABLE `countries`
   ADD PRIMARY KEY (`country_id`);
 
 --
--- Index pour la table `database_version`
+-- Indexes for table `database_version`
 --
 ALTER TABLE `database_version`
   ADD PRIMARY KEY (`database_version_id`);
 
 --
--- Index pour la table `inventories`
+-- Indexes for table `inventories`
 --
 ALTER TABLE `inventories`
   ADD PRIMARY KEY (`inventory_id`);
 
 --
--- Index pour la table `inventory_detail`
+-- Indexes for table `inventory_detail`
 --
 ALTER TABLE `inventory_detail`
   ADD PRIMARY KEY (`inventory_detail_id`),
@@ -895,14 +895,14 @@ ALTER TABLE `inventory_detail`
   ADD KEY `inventory_id` (`inventory_id`);
 
 --
--- Index pour la table `licences`
+-- Indexes for table `licences`
 --
 ALTER TABLE `licences`
   ADD PRIMARY KEY (`licence_id`),
   ADD KEY `fk_licences_licence_types1_idx` (`licence_type_id`);
 
 --
--- Index pour la table `licence_features`
+-- Indexes for table `licence_features`
 --
 ALTER TABLE `licence_features`
   ADD PRIMARY KEY (`licence_feature_id`,`licence_id`,`service_id`) USING BTREE,
@@ -910,45 +910,45 @@ ALTER TABLE `licence_features`
   ADD KEY `fk_licence_features_licences_idx` (`licence_id`);
 
 --
--- Index pour la table `licence_types`
+-- Indexes for table `licence_types`
 --
 ALTER TABLE `licence_types`
   ADD PRIMARY KEY (`licence_type_id`);
 
 --
--- Index pour la table `operations`
+-- Indexes for table `operations`
 --
 ALTER TABLE `operations`
   ADD PRIMARY KEY (`operation_id`),
   ADD KEY `fk_operations_operation_types1_idx` (`operation_type_id`);
 
 --
--- Index pour la table `operation_types`
+-- Indexes for table `operation_types`
 --
 ALTER TABLE `operation_types`
   ADD PRIMARY KEY (`operation_type_id`);
 
 --
--- Index pour la table `password_histories`
+-- Indexes for table `password_histories`
 --
 ALTER TABLE `password_histories`
   ADD PRIMARY KEY (`history_id`),
   ADD KEY `fk_rapport_user_idx` (`user_id`);
 
 --
--- Index pour la table `services`
+-- Indexes for table `services`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`service_id`);
 
 --
--- Index pour la table `sms_tracker`
+-- Indexes for table `sms_tracker`
 --
 ALTER TABLE `sms_tracker`
   ADD PRIMARY KEY (`tracker_id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`),
@@ -957,13 +957,13 @@ ALTER TABLE `users`
   ADD KEY `licence_id` (`licence_id`);
 
 --
--- Index pour la table `user_connections`
+-- Indexes for table `user_connections`
 --
 ALTER TABLE `user_connections`
   ADD PRIMARY KEY (`connection_id`);
 
 --
--- Index pour la table `user_has_features`
+-- Indexes for table `user_has_features`
 --
 ALTER TABLE `user_has_features`
   ADD PRIMARY KEY (`user_has_licence_id`),
@@ -971,7 +971,7 @@ ALTER TABLE `user_has_features`
   ADD KEY `fk_user_has_features_users1_idx` (`user_id`);
 
 --
--- Index pour la table `user_operations`
+-- Indexes for table `user_operations`
 --
 ALTER TABLE `user_operations`
   ADD PRIMARY KEY (`user_operation_id`),
@@ -980,194 +980,194 @@ ALTER TABLE `user_operations`
   ADD KEY `fk_user_operations_inventories1_idx` (`inventory_id`);
 
 --
--- Index pour la table `validate_password`
+-- Indexes for table `validate_password`
 --
 ALTER TABLE `validate_password`
   ADD PRIMARY KEY (`validate_id`),
   ADD KEY `fk_validate_password_user1_idx` (`user_id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `addresses`
+-- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
   MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT pour la table `category_ussd`
+-- AUTO_INCREMENT for table `category_ussd`
 --
 ALTER TABLE `category_ussd`
   MODIFY `category_ussd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT pour la table `companies`
+-- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
   MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `countries`
+-- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `database_version`
+-- AUTO_INCREMENT for table `database_version`
 --
 ALTER TABLE `database_version`
   MODIFY `database_version_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `inventories`
+-- AUTO_INCREMENT for table `inventories`
 --
 ALTER TABLE `inventories`
   MODIFY `inventory_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `inventory_detail`
+-- AUTO_INCREMENT for table `inventory_detail`
 --
 ALTER TABLE `inventory_detail`
   MODIFY `inventory_detail_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `licences`
+-- AUTO_INCREMENT for table `licences`
 --
 ALTER TABLE `licences`
   MODIFY `licence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT pour la table `licence_features`
+-- AUTO_INCREMENT for table `licence_features`
 --
 ALTER TABLE `licence_features`
   MODIFY `licence_feature_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `licence_types`
+-- AUTO_INCREMENT for table `licence_types`
 --
 ALTER TABLE `licence_types`
   MODIFY `licence_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `operations`
+-- AUTO_INCREMENT for table `operations`
 --
 ALTER TABLE `operations`
   MODIFY `operation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT pour la table `operation_types`
+-- AUTO_INCREMENT for table `operation_types`
 --
 ALTER TABLE `operation_types`
   MODIFY `operation_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT pour la table `password_histories`
+-- AUTO_INCREMENT for table `password_histories`
 --
 ALTER TABLE `password_histories`
   MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT pour la table `services`
+-- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
   MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `sms_tracker`
+-- AUTO_INCREMENT for table `sms_tracker`
 --
 ALTER TABLE `sms_tracker`
   MODIFY `tracker_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT pour la table `user_connections`
+-- AUTO_INCREMENT for table `user_connections`
 --
 ALTER TABLE `user_connections`
   MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `user_has_features`
+-- AUTO_INCREMENT for table `user_has_features`
 --
 ALTER TABLE `user_has_features`
   MODIFY `user_has_licence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
--- AUTO_INCREMENT pour la table `user_operations`
+-- AUTO_INCREMENT for table `user_operations`
 --
 ALTER TABLE `user_operations`
   MODIFY `user_operation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT pour la table `validate_password`
+-- AUTO_INCREMENT for table `validate_password`
 --
 ALTER TABLE `validate_password`
   MODIFY `validate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `addresses`
+-- Constraints for table `addresses`
 --
 ALTER TABLE `addresses`
   ADD CONSTRAINT `fk_addresses_companies1` FOREIGN KEY (`company_id`) REFERENCES `companies` (`company_id`),
   ADD CONSTRAINT `fk_addresses_countries1` FOREIGN KEY (`country_id`) REFERENCES `countries` (`country_id`);
 
 --
--- Contraintes pour la table `category_ussd`
+-- Constraints for table `category_ussd`
 --
 ALTER TABLE `category_ussd`
   ADD CONSTRAINT `fk_category_ussd_categories1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`),
   ADD CONSTRAINT `fk_category_ussd_operation_types1` FOREIGN KEY (`operation_type_id`) REFERENCES `operation_types` (`operation_type_id`);
 
 --
--- Contraintes pour la table `inventory_detail`
+-- Constraints for table `inventory_detail`
 --
 ALTER TABLE `inventory_detail`
   ADD CONSTRAINT `inventory_id` FOREIGN KEY (`inventory_id`) REFERENCES `inventories` (`inventory_id`),
   ADD CONSTRAINT `operation_type_id` FOREIGN KEY (`operation_type_id`) REFERENCES `operation_types` (`operation_type_id`);
 
 --
--- Contraintes pour la table `licences`
+-- Constraints for table `licences`
 --
 ALTER TABLE `licences`
   ADD CONSTRAINT `fk_licences_licence_types1` FOREIGN KEY (`licence_type_id`) REFERENCES `licence_types` (`licence_type_id`);
 
 --
--- Contraintes pour la table `licence_features`
+-- Constraints for table `licence_features`
 --
 ALTER TABLE `licence_features`
   ADD CONSTRAINT `fk_licence_features_licences` FOREIGN KEY (`licence_id`) REFERENCES `licences` (`licence_id`),
   ADD CONSTRAINT `licence_features_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`);
 
 --
--- Contraintes pour la table `operations`
+-- Constraints for table `operations`
 --
 ALTER TABLE `operations`
   ADD CONSTRAINT `fk_operations_operation_types1` FOREIGN KEY (`operation_type_id`) REFERENCES `operation_types` (`operation_type_id`);
 
 --
--- Contraintes pour la table `password_histories`
+-- Constraints for table `password_histories`
 --
 ALTER TABLE `password_histories`
   ADD CONSTRAINT `fk_rapport_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
--- Contraintes pour la table `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `fk_users_addresses1` FOREIGN KEY (`address_id`) REFERENCES `addresses` (`address_id`),
@@ -1175,7 +1175,7 @@ ALTER TABLE `users`
   ADD CONSTRAINT `licence_id` FOREIGN KEY (`licence_id`) REFERENCES `licences` (`licence_id`);
 
 --
--- Contraintes pour la table `user_operations`
+-- Constraints for table `user_operations`
 --
 ALTER TABLE `user_operations`
   ADD CONSTRAINT `fk_user_operations_inventories1` FOREIGN KEY (`inventory_id`) REFERENCES `inventories` (`inventory_id`),

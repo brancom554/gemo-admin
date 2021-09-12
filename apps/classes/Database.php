@@ -37,7 +37,21 @@ class Database extends PDO
             $db->commit();
             return true;
         }else {
-            return $db->errorInfo();
+            return $query->errorInfo();
+        }
+    }
+
+    public function InsertDb_Id(String $sql,array $data)
+    {
+        $db = $this->connectDb();
+        $db->beginTransaction();
+        $query = $db->prepare($sql);
+        if ($query->execute($data)) {
+            $last_id = (int)$db->lastInsertId();
+            $db->commit();
+            return $last_id;
+        }else {
+            return $query->errorInfo();
         }
     }
 

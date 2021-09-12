@@ -588,6 +588,9 @@ dl, ol, ul {
 	background-image: linear-gradient(45deg,#F49F84 0,#ED4800 50%,#FAC404 110%)
 }
 
+.white {
+    color: #ffffff !important; }
+
 .pd{
 	padding-left: 1.5rem !important;
 	padding-right: 1.5rem !important;

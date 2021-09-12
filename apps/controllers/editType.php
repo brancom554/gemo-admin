@@ -6,24 +6,20 @@ if (isset($_POST['soumettre'])) {
     if (empty($_POST['libelle'])) {
         $message="Veuillez sélectionner le libellé";
     }
-        $sql = 'UPDATE licence_types SET licence_type_name=:libelle,licence_nb_equipement=:descriptions,licence_nb_transactions_day=:transactions WHERE licence_type_id=:id';
+        $sql = 'UPDATE licence_types SET licence_type_name=:licence_type_name,licence_nb_equipment=:licence_nb_equipment,licence_nb_transactions_day=:licence_nb_transactions_day WHERE licence_type_id=:id';
         $data=[
             'id' => $url_array[4],
-            'libelle'=> strtoupper($_POST['libelle']),
-            'descriptions' => $_POST['equipement'],
-            'transactions' => $_POST['transaction']
+            'licence_type_name'=> strtoupper($_POST['libelle']),
+            'licence_nb_equipment' => $_POST['equipement'],
+            'licence_nb_transactions_day' => $_POST['transaction']
         ];
         $db = new Database();
-        $conn = $db->connectDb();
-        if ($conn->beginTransaction()) {
-            var_dump($_POST);
-            $query = $conn->prepare($sql);
-            if ($query->execute($data)) {
-                if ($conn->commit()) {
-                    header('Location:/configurations/types_licences');
-                    exit;
-                }
-            }
+        $conn = $db->InsertDb($sql,$data);
+        if (!is_array($conn)) {             
+            header('Location:/configurations/types_licences');
+            exit;
+        }else {
+            var_dump($conn);
         }
     
 }

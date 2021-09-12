@@ -197,6 +197,7 @@
   list-style: none;
   transition: all 0.4s ease;
   padding-left: 35px;
+  padding-right: 10px;
 }
 
 /*.sidebar .sidebar-menu li i.arrow{
@@ -786,8 +787,69 @@ th, td {
 td {
   font-size: .85rem; }
 
-tbody tr:nth-child(even) {
-  /*background-color: #6fb2f345 !important;*/ }
+/* Progress Bar */
+.progressbar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+  
+}
+
+.progressbar::before,.progress{
+  content: "";
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+}
+
+.progress{
+  background-color: #FE7701;
+  width: 0%;
+  transition: all 500ms ease;
+}
+
+.progressbar-step{
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.progressbar-step::before{
+  counter-increment: step;
+  content: counter(step);
+  z-index: 1;
+}
+
+.progressbar-step::after{
+  content: attr(data-title);
+  position: absolute;
+  top: 2.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.progressbar-step-active{
+  background-color: #FE7701;
+  color: #fff;
+}
+
+.form-step{
+  display: none;
+}
+
+.form-step-active{
+  display: block;
+}
 
   .menus-div{
     display: flex;

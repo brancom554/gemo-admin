@@ -7,7 +7,13 @@ if (isset($_POST['connexion']) ) {
     $token = filter_input(INPUT_POST,'token',FILTER_SANITIZE_STRING);
     $telephone = filter_input(INPUT_POST,'phone',FILTER_SANITIZE_STRING);
     $passwords = filter_input(INPUT_POST,'password',FILTER_SANITIZE_STRING);
-    if (!$token || $token !== $_SESSION['token']) {
+    
+    if ($token != $_SESSION['token']) {
+        $error = "Token expiré";
+
+        /*var_dump($token);
+        var_dump($_SESSION['token']);
+        return;*/
         
     }else {
         if (empty($_POST['phone'])) {
@@ -53,6 +59,7 @@ if (isset($_POST['connexion']) ) {
     
 }
 $_SESSION['token'] = bin2hex(random_bytes(35));
+
 
 if(file_exists(_VIEW_PATH.$lib->lang."/login.phtml"))  $view=$lib->lang."/login.phtml";
 else  $view=$iniObj->defaultLang."/login.phtml";

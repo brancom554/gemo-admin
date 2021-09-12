@@ -104,39 +104,31 @@
                     <div class="main-cards">
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">500</span>
+                        <span class="solde"><?=$total?></span>
                         <span>Nombre de licences</span>
                     </div>
-                    <div>
-                        <img class="img-gsm" src="<?php $lib->customerSite ?>/UIResources/images/mtn.jpg" alt="" srcset="">
-                    </div>
+                    
                 </div>
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">50000</span>
+                        <span class="solde"><?=$total_active?></span>
                         <span>Nombre de site déployés</span>
                     </div>
-                    <div>
-                        <img class="img-gsm" src="<?php $lib->customerSite ?>/UIResources/images/momo.png" alt="Logo momo MTN" srcset="">
-                    </div>
+                    
                 </div>
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">1000</span>
+                        <span class="solde"><?=$total_active?></span>
                         <span>Nombre d'quipement actifs</span>
                     </div>
-                    <div>
-                        <img class="img-gsm" src="<?php $lib->customerSite ?>/UIResources/images/moov.png" alt="" srcset="">
-                    </div>
+                    
                 </div>
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
                         <span class="solde">50</span>
                         <span>Nombre de plaintes</span>
                     </div>
-                    <div>
-                        <img class="img-gsm" src="<?php $lib->customerSite ?>/UIResources/images/mymomo.png" alt="" srcset="">
-                    </div>
+                    
                 </div>
             </div>
             <section class="recent">
@@ -147,77 +139,85 @@
                         </div>
                         <div class="chart-container padding-1">
                             <canvas id="myChart" width="300" height="200"></canvas>
-                        </div>
-                        
+                        </div>                        
                         <!--<div id="chartContainer2" style="height: 370px; max-width: 920px; margin: 0px auto;"></div> -->
                     </div>
-                    <div class="card-single">
-                    <div class="card-single-header" style="align-items: center;">
-                        <span>Les dernières transactions</span>
-                        <a href="<?php $lib->customerSite ?>/operation/historique" class="btn btn-orange">Plus</a>
+                    <div class="activity-card "> 
+                        <div class="card-single-header padding-10">
+                            <span>Marchands</span>
+                        </div>
+                        <div class="chart-container2 padding-1">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                                <!--<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>-->
                     </div>
-                    <div class="card-body table-responsive">
-                        <table class="table table-striped" style="margin-bottom:0">
-                            <thead class="">
-                                <tr>
-                                    <th scope="col" class="primary">Opérations</th>
-                                    
-                                    <th scope="col" class="primary">Montants</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>DEPOT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>FORFAIT INTERNET</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>RETRAIT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>DEPOT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>FORFAIT INTERNET</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>RETRAIT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>DEPOT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>FORFAIT INTERNET</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>RETRAIT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td>RETRAIT</td>
-                                    <td>30000 FCFA</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                    <!--<div class="card-single">
+                        <div class="card-single-header" style="align-items: center;">
+                            <span>Les dernières transactions</span>
+                            <a href="<?php $lib->customerSite ?>/operation/historique" class="btn btn-orange">Plus</a>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="table table-striped" style="margin-bottom:0">
+                                <thead class="">
+                                    <tr>
+                                        <th scope="col" class="primary">Opérations</th>
+                                        
+                                        <th scope="col" class="primary">Montants</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DEPOT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FORFAIT INTERNET</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RETRAIT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DEPOT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FORFAIT INTERNET</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RETRAIT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DEPOT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FORFAIT INTERNET</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RETRAIT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RETRAIT</td>
+                                        <td>30000 FCFA</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>-->
                 </div>
                 <div class="activity-card carmember"> 
                     <div class="card-single-header padding-10">
-                        <span>Opérations</span>
+                        <span>Nouveaux Marchands</span>
                     </div>
                     <div class="chart-container2 padding-1">
-                        <canvas id="myChart2"></canvas>
+                        <canvas id="myChart3"></canvas>
                     </div>
                             <!--<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>-->
                 </div>

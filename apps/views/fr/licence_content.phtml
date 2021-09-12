@@ -1,5 +1,5 @@
 <main>
-            <h2 class="main-title">Activation des licences</h2>
+            <h2 class="main-title">Licences</h2>
             <div class="track padding-bottom-20">
                 <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
             </div>
@@ -23,7 +23,7 @@
                                     <tr>
                                         <th>Licence key</th>
                                         <th>Société</th>
-                                        <th>Date d'activation</th>
+                                        <th>Type</th>
                                         <th>Date d'expiration</th>
                                         <th>Statut</th>
                                         <th style="text-align:center">Actions</th>
@@ -35,7 +35,7 @@
                                         <tr>
                                              <td><?=$licence['licence_key'] ?></td>
                                              <td><?=$licence['company_name'] ?></td>
-                                             <td><?=$licence['activation_date'] ?></td>
+                                             <td><?=$licence['licence_type_name'] ?></td>
                                              <td><?=$licence['expiration_date'] ?></td>
                                              <td>
                                                   <?php if($licence['is_active'] == 1): ?>
@@ -50,10 +50,10 @@
                                              </td>
                                              
                                              <td style="display:flex">
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/activer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 success cursor"> Activer</span>
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/bloquer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 danger cursor">Bloquer</span>
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/modifier/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 primary cursor">Modifier</span>
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/secondaire/<?=$licence['licence_id'] ?>'" class="btn-action black pg-5 warning cursor">Licence secondaire</span>
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/activer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 success cursor"> Offres</span>
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/bloquer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 danger cursor">Désactiver</span>
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/modifier/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 primary cursor">Relancer</span>
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/secondaire/<?=$licence['licence_id'] ?>'" class="btn-action black pg-5 warning cursor">Licences secondaires</span>
                                              </td>
                                         </tr>
                                         <?php endforeach; ?>

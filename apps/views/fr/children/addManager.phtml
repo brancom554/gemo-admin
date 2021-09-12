@@ -4,7 +4,7 @@
 
 	<main>
         <div>
-            <span class="main-title font-1">Création un nouveau manager</span>
+            <span class="main-title font-1">Création un nouveau manager/ agent</span>
             <div class="track">
                 <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $url_array[2];?></span><span>/</span><span>Création</span>
             </div>
@@ -106,7 +106,7 @@
                         <button class="form-button" name="soumettre" type="submit">CREER UN MANAGER</button>
                     </div>
                 </form>-->
-                <form class="row g-3" action="ajouter" method="post">
+                <form class="row g-3" action="" method="post">
                 <div class="col-md-6">
                     <label for="nom" class="form-label">Nom</label>
                     <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
@@ -145,7 +145,7 @@
                     <label for="uuid" class="form-label">Application uuid</label>
                     <input type="text" class="form-control" name="uuid"  id="uuid" placeholder="Application uuid">
                     <?php if(isset($messageuuid)):?>
-                                <span class="notification"><?php echo $messageuuid ?></span>
+                        <span class="notification"><?php echo $messageuuid ?></span>
                     <?php endif;?>
                 </div>
                 <div class="col-md-3">

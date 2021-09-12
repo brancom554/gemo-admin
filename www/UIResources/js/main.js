@@ -30,10 +30,52 @@ $(document).ready(function(){
         
     })
 
+    const prevBtns = document.querySelectorAll(".btn-prev")
+    const nextBtns = document.querySelectorAll(".btn-next")
+    const progress = document.getElementById("progress")
+    const formSteps = document.querySelectorAll(".form-step")
+    const progressSteps = document.querySelectorAll(".progressbar-step")
+
+    let formStepsNum = 0
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener("click",() => {
+            formStepsNum++
+            updateFormSteps()
+            updateProgresBar()
+        })
+    });
+
+    prevBtns.forEach(btn => {
+        btn.addEventListener("click",() => {
+            formStepsNum--
+            updateFormSteps()
+            updateProgresBar()
+        })
+    });
+
+    function updateFormSteps() {
+        formSteps.forEach(formStep => {
+            formStep.classList.contains("form-step-active") &&
+                formStep.classList.remove("form-step-active")
+        })
+        formSteps[formStepsNum].classList.add('form-step-active')
+    }
+
+    function updateProgresBar() {
+        progressSteps.forEach((progressStep, idx) => {
+            if (idx < formStepsNum + 1) {
+                progressStep.classList.add('progressbar-step-active')
+            }else{
+                progressStep.classList.remove('progressbar-step-active')
+            }
+        })
+        const progressActive = document.querySelectorAll(".progressbar-step-active")
+        progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%"
+    }
+
   window.onload = function() {
-
-    
-
+      
     $('.sidebar-menu li').on('click','a',function(e){
         
         if ($(this).parent().children('ul').length) {
@@ -90,17 +132,15 @@ $(document).ready(function(){
 
 const data = {
     labels: [
-      'Red',
-      'Forfait',
-      'Mobile money'
+      'Marchand Basic',
+      'Marchand Premium'
     ],
     datasets: [{
-      label: 'My First Dataset',
-      data: [300, 50, 100],
+      label: 'Marchands',
+      data: [50, 100],
       backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
+        'rgb(255, 172, 100)',
+        'rgb(0, 168, 243)'
       ],
       hoverOffset: 4
     }]
@@ -114,6 +154,32 @@ var ctx = document.getElementById('myChart2');
         responsive:true,
     }
 });
+
+const data3 = {
+    labels: [
+      'Marchand Basic',
+      'Marchand Premium'
+    ],
+    datasets: [{
+      label: 'Marchands',
+      data: [50, 100],
+      backgroundColor: [
+        'rgb(255, 172, 100)',
+        'rgb(0, 168, 243)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+var ctx = document.getElementById('myChart3');
+    var myChart3 = new Chart(ctx, {
+    type: 'doughnut',
+    data: data3,
+    options:{
+        responsive:true,
+    }
+});
+
   }
 
     var datatable = $('#table').DataTable({
@@ -191,6 +257,8 @@ var ctx = document.getElementById('myChart2');
     $('#filter').on('keyup',function(){
         datatables.search(this.value).draw();
     });
+
+
     
 })
 })(window.jQuery);

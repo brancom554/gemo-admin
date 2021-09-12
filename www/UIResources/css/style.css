@@ -97,6 +97,7 @@ nav.sidebar-menu ul li a{
 
 .margin-bottom-20{
   margin-bottom: 20px;
+  padding-right: 20px;
 }
 
 .form-check{
@@ -105,6 +106,8 @@ nav.sidebar-menu ul li a{
     grid-column-gap: 1.5rem;*/
     display: flex;
 }
+
+
 
 .form-check div{
   width: 100%;
@@ -344,4 +347,8 @@ ul{
 
 ::-webkit-scrollbar-button{
   display: none;
+}
+
+.margin-r{
+  margin-right: 1.4rem;
 }

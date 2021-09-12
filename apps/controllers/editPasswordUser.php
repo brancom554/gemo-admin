@@ -11,10 +11,11 @@ if (isset($_POST['update'])) {
         }else{
             $messagepassword = "Veuillez bien réécrire le mot de passe.";
         }
-        $sql = 'UPDATE users SET encrypted_password=:password WHERE user_id=:id';
+        $sql = 'UPDATE users SET encrypted_password=:password,last_upadte_date =:date WHERE user_id=:id';
         $data=[
             'id' => $url_array[4],
-            'password'=> $password
+            'password'=> $password,
+            'date' => ''
         ];
         $db = new Database();
             $query = $db->InsertDb($sql,$data);

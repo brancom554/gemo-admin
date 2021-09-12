@@ -1,7 +1,9 @@
 <div class="login-card">
   <!--<img class="login-header" src="/img/logo.png" alt="">-->
   <div class="center">
-  <img src="<?php $lib->customerSite ?>/UIResources/logo.png" alt="Logo GEMO" style="width:150px" srcset="">
+    <a href="<?php $lib->customerSite ?>/">
+      <img src="<?php $lib->customerSite ?>/UIResources/logo.png" alt="Logo GEMO" style="width:150px" srcset="">
+    </a>
   </div>
   <?php if(isset($error)):?>
     <div class="message">
@@ -29,10 +31,9 @@
       <div class="btn-submit">
         <!--<a class="btn-login" href="/pages/index.html">Connecter</a>-->
         <button class="btn-login" name="connexion">Connecter</button>
-        
-        <!--<div class="class-forget">
-          <a href="">Créer un compte</a>
-        </div>-->
+        <div class="class-forget">
+          <a href="<?php $lib->customerSite ?>/">Revenir sur la page d'acceuil</a>
+        </div>
       </div>       
     </form>
   </div>

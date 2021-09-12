@@ -103,8 +103,12 @@ switch ($page_requested) {
 		$storeUrl = urldecode($param2[0]);
 		include "magasin_page.php";
 		break;
-	case "prix":
-		include "prix_en_baisse_page.php";
+	case "utilisateurs":
+		include "usersController.php";
+		break;
+	
+	case "change":
+		include "loginController.php";
 		break;
 
 	case "essai":
