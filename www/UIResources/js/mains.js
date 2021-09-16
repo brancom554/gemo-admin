@@ -9,6 +9,10 @@
 			$('#mainNav').addClass('navbar-reduce');
 		}
 	});
+
+	$('#example').whatsappChatSupport({
+        defaultMsg : 'Bienvenue sur le chat de GEMO',
+    });
 	
 	// START PRELOADED
     $(window).on('load', function () {

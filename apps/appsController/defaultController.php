@@ -13,8 +13,8 @@ switch ($page_requested) {
 				include "userManagerController.php";
 				break;
 			case "inventaire":
-				include "inventaire.php";
-				break;	
+				include "inventaireController.php";
+				break;
 			case "rapport":
 				include "rapport.php";
 				break;	
@@ -171,29 +171,6 @@ switch ($page_requested) {
 		exit;
 		break;
 
-	case 'corpCss':
-		include(_CSS_PATH . $url_array[3]);
-		exit;
-		break;
-
-	case 'design':
-		$im = imagecreatefrompng(_IMG_PATH . $url_array[3]);
-		header('Content-Type: image/png');
-		imagepng($im);
-		imagedestroy($im);
-		exit;
-		break;
-
-	case 'xml':
-		include(_LIB_PATH . "/xmlDataRequest.php");
-		exit;
-		break;
-
-	case 'json':
-		include(_LIB_PATH . "jsonDataRequest.php");
-		exit;
-		break;
-
 	case "lang":
 		$cntFile = "/change_lang.php";
 		include _CONTROLER_PATH . $cntFile;
@@ -205,38 +182,8 @@ switch ($page_requested) {
 		break;
 		exit;
 
-	case "testPunch":
-		include "puchOutTest.php";
-		exit;
-		break;
-	case "receivePunchOut":
-		include "puchOutReceiveCart.php";
-		exit;
-		break;
-	case "sendOrderPunchOut":
-		include "puchOutTestOrder.php";
-		exit;
-		break;
-	case "cgu":
-		$view = "fr/politique_de_confidentialite.phtml";
-		break;
-	case "mentionslegales":
-		$view = "fr/mentions_legales.phtml";
-		break;
-
-	case "professionnels":
-		$view = $viewPath . "/" . $lib->lang . "/" . "professionnels.phtml";
-		break;
-
-	case "map-points":
-		$view = $viewPath . "/" . $lib->lang . "/" . "map_points.phtml";
-		break;
-
-	case "equipe":
-		$view = $viewPath . "/" . $lib->lang . "/" . "map_points.phtml";
-		break;
-
 	default:
+	include "homeController.php";
 	$view = "index.phtml";
 
 	// $view = $viewPath . "/" . $lib->lang . "/" . "home_page_content.phtml";

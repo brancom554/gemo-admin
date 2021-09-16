@@ -1,0 +1,69 @@
+<main>
+    
+            <h2 class="main-title">Inventaires</h2>
+            <div class="track padding-bottom-20">
+                <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
+            </div>
+            <!-- <div class="main-btn">
+                <a href="addLicence" id="myBtn"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter une nouvelle licence</a>
+            </div> -->
+           
+            <section class="recent">
+                <div class="activity">
+                    <div style="padding-top: 5px;" class="activity-card">
+                        <h3>Inventaires</h3>
+                        <div class="table-responsive">
+                         
+                            <table id="table" style="margin-top: 30px;" border="0">
+                            <thead>
+                                    <tr>
+                                        <th>Nom de l'inventaire</th>
+                                        <th>Date début </th>
+                                        <th>Date fin</th>
+                                        
+                                        <th style="text-align:center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php if(isset($response)): ?>
+                                        <?php foreach($response as $res): ?>
+                                        <tr>
+                                             <td><?=$res['inventory_name'] ?></td>
+                                             <td><?=$res['date_from'] ?></td>
+                                             <td><?=$res['date_to'] ?></td>
+                                             <td> 
+                                                <!-- <span id="modal2" onclick="document.location='<?php $lib->customerSite ?>/super/licence/activer/<?=$licence['licence_id'] ?>'" data-target="#modal1" class="span-success cursor success">Details</span> -->
+                                                <span onclick="document.location='<?php $lib->customerSite ?>/administration/inventaire/details/<?=$res['inventory_id'] ?>'" class="span-success cursor success">Details</span>
+                                             </td>
+                                            
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </tbody>
+                            </table>                       
+                        </div>   
+                    </div>
+                </div>
+                         
+<!-- Modal Structure -->
+<!-- <div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+<script>
+ 
+        $( "#modal2" ).click(function() {
+            // alert( "Handler for .click() called." );
+            $('.modal').modal();
+});
+
+</script> -->
+
+            </section>
+        </main>

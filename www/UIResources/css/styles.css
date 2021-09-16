@@ -588,6 +588,11 @@ dl, ol, ul {
 	background-image: linear-gradient(45deg,#F49F84 0,#ED4800 50%,#FAC404 110%)
 }
 
+/*#jvlabelWrap{
+	right: 0 !important;
+	left: 10px !important;
+}*/
+
 .white {
     color: #ffffff !important; }
 

@@ -29,6 +29,9 @@
 	<link rel="stylesheet" href="<?php echo $iniObj->UIPath; ?>/assets/css/owl.theme.default.min.css">
 	<!-- Site Main Style sheet css -->
 	<link rel="stylesheet" href="<?php echo $iniObj->UIPath; ?>/css/styles.css">
+	
+	<link rel="stylesheet" href="<?php echo $iniObj->UIPath; ?>/plugins/plugin/whatsapp-chat-support.css">
+
 	<!-- Site Main Responsive CSS -->
 	<link rel="stylesheet" href="<?php echo $iniObj->UIPath; ?>/assets/css/responsive.css">
 </head>
@@ -247,13 +250,14 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="single-features-item">
 						<div class="features-icon color-icon-5">
-						<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
+						<svg id="Capa_1" class="white" enable-background="new 0 0 509.391 509.391" height="33" viewBox="0 0 509.391 509.391" width="33" xmlns="http://www.w3.org/2000/svg"><g id="XMLID_588_"><path id="XMLID_686_" d="m434.792 74.599c-48.105-48.106-112.065-74.599-180.097-74.599s-131.991 26.493-180.096 74.599-74.599 112.065-74.599 180.096 26.493 131.991 74.599 180.097 112.065 74.599 180.097 74.599 131.991-26.493 180.097-74.599 74.599-112.065 74.599-180.097-26.495-131.991-74.6-180.096zm-404.792 180.096c0-53.627 18.894-102.918 50.362-141.589l42.002 42.002c-18.228 10.886-35.234 24.103-50.637 39.506l21.213 21.213c15.471-15.471 32.776-28.438 51.413-38.73l40.021 40.021c-19.453 8.498-37.667 20.688-53.561 36.582l21.213 21.213c16.16-16.16 35.216-27.698 55.51-34.633l43.775 43.775c-22.842.819-45.439 9.908-62.836 27.306l21.213 21.213c12.022-12.022 28.007-18.644 45.009-18.644s32.986 6.621 45.009 18.644l.062-.062 96.518 96.518c-38.671 31.468-87.962 50.362-141.589 50.362-123.899-.001-224.697-100.799-224.697-224.697zm388.263 153.887-175.62-175.621c41.087-3.392 83.353 10.584 114.722 41.951l21.213-21.213c-43.945-43.946-105.618-59.612-162.211-47.014l-43.025-43.025c25.64-9.739 53.104-14.835 81.353-14.835 61.103 0 118.549 23.795 161.755 67.001l21.213-21.213c-48.872-48.873-113.852-75.788-182.968-75.788-36.531 0-71.905 7.525-104.357 21.831l-49.529-49.529c40.238-37.878 94.395-61.127 153.886-61.127 123.897 0 224.695 100.798 224.695 224.695.001 59.492-23.248 113.649-61.127 153.887z"/><path id="XMLID_810_" d="m254.735 373.066c-7.846 0-15.363 6.899-15 15 .364 8.127 6.591 15 15 15 7.846 0 15.363-6.899 15-15-.364-8.127-6.591-15-15-15z"/></g></svg>
+						<!--<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
 							<path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
 							<path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
-						</svg>
+						</svg>-->
 						</div>
 						<div class="features-text">
-							<h3>Utilisez-le en hors-ligne</h3>
+							<h3>Utilisation hors ligne</h3>
 							<p>Sans connexion internet, GEMO peut fonctionner.</p>
 						</div>
 					</div>
@@ -435,7 +439,8 @@
 			<div class="row d-flex align-items-center">
 				<div class="col-lg-5 col-md-12 col-sm-12">
 					<div class="choose-content-images">
-						<img src="<?php echo $iniObj->UIPath; ?>/img/choose.png" alt="choose images">
+						<img src="<?php echo $iniObj->UIPath; ?>/img/choose3.png" alt="choose images">
+						
 					</div>
 				</div>
 				<div class="col-lg-6 offset-lg-1 col-md-12 col-sm-12">
@@ -456,12 +461,15 @@
 							</div>
 							<div class="choose-single-feature">
 								<div class="choose-features-icon color-icon-2">
-								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-laptop white" viewBox="0 0 16 16">
+									<svg width="40" height="40" fill="currentColor" class="bi bi-list-check white" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+									</svg>
+								<!--<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-laptop white" viewBox="0 0 16 16">
 									<path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
-								</svg>
+								</svg>-->
 								</div>
 								<div class="choose-features-info">
-									<h3>Historique complet.</h3>
+									<h3>Historique complet disponible 24h/24.</h3>
 								</div>
 							</div>
 							<div class="choose-single-feature">
@@ -679,20 +687,24 @@
 					<div class="faq-accordion first-faq">
 						<ul class="accordion">
 							<li class="accordion-item">
-								<a class="accordion-title active" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> What do I do when my computer crashes?</a>
-								<p class="accordion-content show">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+								<a class="accordion-title active" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> Comment installer GEMO?</a>
+								<p class="accordion-content show">L'application est téléchargeable sur playstore avec les fonctionnalités gratuites pendant 14 jours</p>
 							</li>
 							<li class="accordion-item">
-								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> There is no display on the monitor, what do I do now?</a>
-								<p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.</p>
+								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> Comment l'utiliser ?</a>
+								<p class="accordion-content">Un guide complet est disponible et téléchargeable ici.</br>Un support technique reste disponible pour répondre à toutes vos préocuppations.</p>
 							</li>
 							<li class="accordion-item">
-								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> How can I clean my keyboard?</a>
-								<p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.</p>
+								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> Puis-je utiliser GEMO sans connexion internet?</a>
+								<p class="accordion-content">Oui, il est possible de l'utiliser sans connexion internet. Vous pourriez éventuellement activer la connexion internet pour l'exportation des données afin que toutes les informations soient visibles également dans le tableau de bord.</p>
 							</li>
 							<li class="accordion-item">
-								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> Why is my computer mouse acting erratically?</a>
-								<p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.</p>
+								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> Quels sont vos offres?</a>
+								<p class="accordion-content">Télécharger notre brochure ici</p>
+							</li>
+							<li class="accordion-item">
+								<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-caret-down"></i> Comment souscrire à une offre?</a>
+								<p class="accordion-content">Contactez-nous au +229 91 96 11 11 ou prenez rendez-vous sur notre site internet.</p>
 							</li>
 						</ul>
 					</div>
@@ -953,19 +965,90 @@
 		</div>
 	</footer>
 	<!-- End Footer Section -->
+	<div class="whatsapp_chat_support wcs_fixed_right" id="example">
+		<div class="wcs_button_label">
+			Des Questions?
+		</div>  
+		<div class="wcs_button wcs_button_circle">
+			<span class="fa fa-whatsapp"></span>
+		</div>  
+	
+		<div class="wcs_popup">
+			<div class="wcs_popup_close">
+				<span class="fa fa-close"></span>
+			</div>
+			<div class="wcs_popup_header">
+				<strong>Need Help? Chat with us</strong>
+				<br>
+				<div class="wcs_popup_header_description">Click one of our representatives below</div>
+			</div>  
+			<div class="wcs_popup_person_container">
+				<div 
+					class="wcs_popup_person" 
+					data-number="22991961111"
+					data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+				>
+					<div class="wcs_popup_person_img"><img src="<?php echo $iniObj->UIPath; ?>/img/person_1.jpg" alt=""></div>
+					<div class="wcs_popup_person_content">
+						<div class="wcs_popup_person_name">YERIMA Pierrick</div>
+						<div class="wcs_popup_person_description">Directeur commercial</div>
+						<div class="wcs_popup_person_status">En ligne</div>
+					</div>  
+				</div>
+	
+				<div 
+					class="wcs_popup_person" 
+					data-number="22962292523"
+					data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+				>
+					<div class="wcs_popup_person_img"><img src="<?php echo $iniObj->UIPath; ?>/img/person_2.jpg" alt=""></div>
+					<div class="wcs_popup_person_content">
+						<div class="wcs_popup_person_name">HOUSSOU Anne Laure</div>
+						<div class="wcs_popup_person_description">Support Client</div>
+						<div class="wcs_popup_person_status">En ligne</div>
+					</div>
+				</div>
+	
+				<div 
+					class="wcs_popup_person" 
+					data-number="22966152976"
+					data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+				>
+					<div class="wcs_popup_person_img"><img src="<?php echo $iniObj->UIPath; ?>/img/person_3.jpg" alt=""></div>
+					<div class="wcs_popup_person_content">
+						<div class="wcs_popup_person_name">AROUNA Hafiz</div>
+						<div class="wcs_popup_person_description">Support Technique</div>
+						<div class="wcs_popup_person_status">En ligne</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<!-- Back to Top -->
 	<a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
 	
-	<!-- Start Live Chat Code -->
-	<script type="text/javascript" src="http://localhost/live_chat/assets/js/jquery.min.js"></script>
-	<script type="text/javascript">jQuery.noConflict();</script>
-	<script type="text/javascript">jQuery(document).ready(function($) {$.ajaxSetup({xhrFields: {withCredentials: true},headers: {"X-Requested-With": "XMLHttpRequest"}});$.ajax({type: "GET",url: "http://localhost/live_chat/live_chat",dataType: "html",success: function(data) {$("body").append(data);}});});</script>
-	<!-- End Live Chat Code -->
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/6142212925797d7a89ff2646/1ffl532vd';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 	<!-- All Jquery Js-->
 	<script src="<?php echo $iniObj->UIPath; ?>/js/jquery-3.5.1.min.js"></script>
 	<script src="<?php echo $iniObj->UIPath; ?>/js/bootstrap.min.js"></script>
+	<!--<script src="https://code-eu1.jivosite.com/widget/KEA32T9SJh" async></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="<?php echo $iniObj->UIPath; ?>/plugins/plugin/components/moment/moment.min.js"></script>
+	<script src="<?php echo $iniObj->UIPath; ?>/plugins/plugin/components/moment/moment-timezone-with-data.min.js"></script> <!-- spanish language (es) -->
+	<script src="<?php echo $iniObj->UIPath; ?>/plugins/plugin/whatsapp-chat-support.js"></script>
 	
 	<script src="<?php echo $iniObj->UIPath; ?>/js/plugins.js"></script>
 	<!--Site Main js-->

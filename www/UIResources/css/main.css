@@ -35,7 +35,9 @@
 .login-content {
   padding: 20px; }
   .login-content h1 {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.2rem;
+     }
   .login-content form {
     margin-top: 20px; }
 
@@ -44,12 +46,13 @@
   flex-direction: column;
   margin-bottom: 20px; }
   .login-input input {
-    height: 40px;
+    height: 69px;
     width: 350px;
     font-size: 1rem;
     border: 2px solid #eaeced;
     outline: none;
-    border-radius: 10px; }
+    border-radius: 10px;
+    padding: 10px }
     .login-input input:hover {
       border: 2px solid #00A8F3; }
     .login-input input:focus {
@@ -95,7 +98,7 @@
   color: black;
   transform: translate(-50%, -50%);
   box-shadow: 0 10px 25px rgb(92 99 105 / 20%);
-  background: #fff; }
+  background: #ffffffd1; }
 
 #sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
 #sidebar-toggle:checked ~ .sidebar li span {
@@ -379,7 +382,7 @@ main {
   margin-top: 20px;
   background: #f8f9fa;
   min-height: 90vh;
-  padding: 1rem 2rem; }
+  padding: 3rem 2rem; }
 
 .main-title {
   color: #FE7701;
@@ -477,11 +480,18 @@ body {
 
 body {
   background: #f5f7fa;
-  padding: 40px 0;
+  /*padding: 40px 0;*/
   box-sizing: border-box;
   font-family: 'montserrat', sans-serif;
   color: #707070; }
 
+.img-connexion{
+  background-image: url('../img-connexion.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
 .calendar {
   display: grid;
   width: 100%;

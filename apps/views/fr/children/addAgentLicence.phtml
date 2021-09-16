@@ -1,0 +1,53 @@
+<?php include _VIEW_PATH."/common_header.phtml";?>
+
+<?php include _VIEW_PATH."common_top_bar.phtml";?>
+
+	<main>
+        <div>
+            <span class="main-title font-1">Attribuer une licence</span>
+            <div class="track">
+                <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $url_array[2];?></span><span>/</span><span>Licence</span>
+            </div>
+            <form action="" method="post">
+                
+                <div class="row form">
+                    <div class="col-md-6">
+                        <label for="inputState" class="form-label">Agents</label>
+                        <select id="inputState" class="form-select" name="agent">
+                            <option selected>Selectionner un Agent</option>
+                            <?php if(isset($response)): ?>
+                                <?php foreach($response as $agent): ?>
+                                    <option value="<?=$agent['user_id'] ?>"><?=$agent['firstname'] .' '. $agent['lastname'] ?></option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+                        <?php if(isset($message1)):?>
+                        <span class="notification"><?php echo $message1 ?></span>
+                    <?php endif;?>
+                    </div>
+
+        
+                    <div class="col-md-6">
+                        <label for="inputZip" class="form-label">Licences</label>
+                        <select id="inputState" class="form-select" name="licence">
+                            <option disabled selected>Selectionner une Licence</option>
+                            <?php if(isset($response1)): ?>
+                                <?php foreach($response1 as $licence_key): ?>
+                                    <option value="<?=$licence_key['licence_id'] ?>"><?=$licence_key['licence_key'] ?></option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+                        <?php if(isset($message2)):?>
+                        <span class="notification"><?php echo $message2 ?></span>
+                    <?php endif;?>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-primary" name="soumettre">Attribuer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<?php include _VIEW_PATH.$lib->lang."/common_footer.phtml";?>
+<?php include _VIEW_PATH."/common_include_files.phtml";?>
