@@ -4,27 +4,9 @@
 
 <?php include _VIEW_PATH."common_top_bar.phtml";?>
 
-	<main>
-        <?php var_dump($response); ?>
-        <div>
-            <span class="main-title font-1">Confirmation</span>
-            <div class="track">
-                <span <?php if($page_requested =="administration"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $url_array[2];?></span><span>/</span><span>Révocation</span>
-            </div>
-            <div class="form">
-                <form class="row g-3" action="" method="post">
-                <div class="col-md-6">
-                    <label for="licence" class="form-label">Licence</label>
-                    <input type="text" class="form-control" id="licence" value="<?=$response['licence_key'] ?>" name="licence">
-                </div>
-                
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary" name="soumettre">Valider</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </main>
+<?php
+	include _VIEW_PATH.$lib->lang."/revocation_licence_content.phtml";
+	?>
 
 <?php include _VIEW_PATH.$lib->lang."/common_footer.phtml";?>
 <?php include _VIEW_PATH."/common_include_files.phtml";?>

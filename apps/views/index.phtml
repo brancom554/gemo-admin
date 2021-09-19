@@ -9,7 +9,7 @@
 	<meta name="keywords" content="gemo">
 	<meta name="description" content="GEMO - Gestion des Marchands Opérateurs">
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gotham:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="<?php echo $iniObj->UIPath; ?>/img/favicon.png">
@@ -54,7 +54,7 @@
 				<img src="<?php echo $iniObj->UIPath; ?>/logo.png" alt="Logo GEMO" srcset="">
 			</div>
 			<div style="width:250px" id="ligth">
-				<img src="<?php echo $iniObj->UIPath; ?>/logo_light.png" alt="Logo GEMO" srcset="">
+				<img src="<?php echo $iniObj->UIPath; ?>/logo_light2.png" alt="Logo GEMO" srcset="">
 			</div> </a>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation"> <span></span>
 				<span></span>
@@ -127,43 +127,43 @@
 												<div class="row">
 													<div class="col-lg-12 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_name" type="text" name="name" placeholder="Le nom de la société" required="required">
+															<input id="form_name" type="text" name="essai_name" placeholder="Le nom de la société" required="required">
 														</div>
 													</div>
 													<div class="col-lg-6 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_gerant" type="text" name="phone" placeholder="Le nom du gérant" required="required">
+															<input id="form_gerant" type="text" name="essai_gerant" placeholder="Le nom du gérant" required="required">
 														</div>
 													</div>
 													<div class="col-lg-6 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_phone" type="text" name="subject" placeholder="Le numéro" required="required">
+															<input id="form_phone" type="text" name="essai_contact" placeholder="Le numéro" required="required">
 														</div>
 													</div>
 													<div class="col-lg-6 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_address" type="text" name="phone" placeholder="L'addresse du point de vente" required="required">
+															<input id="form_address" type="text" name="essai_address" placeholder="L'addresse du point de vente" required="required">
 														</div>
 													</div>
 													<div class="col-lg-6 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_nombre" type="text" name="subject" placeholder="Nombre de téléphone	" required="required">
+															<input id="form_nombre" type="text" name="essai_phone" placeholder="Nombre de téléphone	" required="required">
 														</div>
 													</div>
 													<div class="col-lg-12 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_ifu" type="text" name="phone" placeholder="Le numéro IFU" required="required">
+															<input id="form_ifu" type="text" name="essai_ifu" placeholder="Le numéro IFU" required="required">
 														</div>
 													</div>
 													<div class="col-lg-12 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_service" type="text" name="phone" placeholder="Les services" required="required">
+															<input id="form_service" type="text" name="essai_service" placeholder="Les services" required="required">
 														</div>
 													</div>
 													
 													
 													<div class="col-md-12">
-														<button type="submit" class="button">Envoyer la demande</button>
+														<button type="submit" name="essai" class="button">Envoyer la demande</button>
 													</div>
 												</div>
 											</div>
@@ -367,28 +367,28 @@
 												<div class="row">
 													<div class="col-lg-12 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_name" type="text" name="name" placeholder="Le nom de la société" required="required">
+															<input id="form_name" type="text" name="rdv_name" placeholder="Le nom de la société" required="required">
 														</div>
 													</div>
 													<div class="col-lg-6 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_gerant" type="text" name="phone" placeholder="Le nom du gérant" required="required">
+															<input id="form_gerant" type="text" name="rdv_gerant" placeholder="Le nom du gérant" required="required">
 														</div>
 													</div>
 													<div class="col-lg-6 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_phone" type="text" name="subject" placeholder="Le contact" required="required">
+															<input id="form_phone" type="text" name="rdv_contact" placeholder="Le contact" required="required">
 														</div>
 													</div>
 													<div class="col-lg-12 col-md-12">
 														<div class="form-group has-error has-danger">
-															<input id="form_poste" type="text" name="phone" placeholder="Poste dans la société" required="required">
+															<input id="form_poste" type="text" name="rdv_poste" placeholder="Poste dans la société" required="required">
 														</div>
 													</div>
 													
 													
 													<div class="col-md-12">
-														<button type="submit" class="button">Envoyer le Message</button>
+														<button type="submit" name="rdv" class="button">Demande de rendez-vous</button>
 													</div>
 												</div>
 											</div>
@@ -718,6 +718,27 @@
 		</div>
 	</section>
 	<!-- End Faq Section -->
+
+	<!-- End Pricing Section -->
+	<section class="team-area pb-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="section-title">
+						<h6 class="small-title"></h6>
+						<h2>Nos offres</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-6">
+					<img src="<?php echo $iniObj->UIPath; ?>/img/pricing.png" alt="Pricing">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Pricing Section -->
 	
 	<!-- Start Team Section -->
 	<!--<section class="team-area pb-100">
@@ -889,33 +910,39 @@
 						<form class="contact-form form" id="contact-form" action="" method="POST">
 							<div class="controls">
 								<div class="row">
+									<?php if(!empty($status)):?>
+										<div class="col-md-12 alert alert-<?=$classe?>	 alert-dismissible fade show" role="alert">
+											<?=$notification?>
+										<!--<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>-->
+										</div>
+									<?php endif;?>
 									<div class="col-lg-12 col-md-12">
 										<div class="form-group has-error has-danger">
-											<input id="form_name" type="text" name="name" placeholder="Vôtre nom et prénom" required="required">
+											<input id="form_name" type="text" name="client" placeholder="Vôtre nom et prénom" required="required">
 										</div>
 									</div>
 									<div class="col-lg-12 col-md-12">
 										<div class="form-group has-error has-danger">
-											<input id="form_company" type="text" name="name" placeholder="Vôtre nom de votre société" required="required">
+											<input id="form_company" type="text" name="clientsociete" placeholder="Vôtre nom de votre société" required="required">
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-12">
 										<div class="form-group has-error has-danger">
-											<input id="form_email" type="text" name="phone" placeholder="Vôtre contact" required="required">
+											<input id="form_email" type="text" name="clientphone" placeholder="Vôtre contact" required="required">
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-12">
 										<div class="form-group has-error has-danger">
-											<input id="form_subject" type="text" name="subject" placeholder="Vôtre sujet de message" required="required">
+											<input id="form_subject" type="text" name="clientsubject" placeholder="Vôtre sujet de message" required="required">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<textarea id="form_message" name="message" placeholder="Vôtre message" rows="4" required="required"></textarea>
+											<textarea id="form_message" name="clientmessage" placeholder="Vôtre message" rows="4" required="required"></textarea>
 										</div>
 									</div>
 									<div class="col-md-12">
-										<button type="submit" class="button">Envoyer le Message</button>
+										<button type="submit" name="contact" class="button">Envoyer le Message</button>
 									</div>
 								</div>
 							</div>
@@ -985,12 +1012,12 @@
 			<div class="wcs_popup_person_container">
 				<div 
 					class="wcs_popup_person" 
-					data-number="22991961111"
+					data-number="22997494848"
 					data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
 				>
 					<div class="wcs_popup_person_img"><img src="<?php echo $iniObj->UIPath; ?>/img/person_1.jpg" alt=""></div>
 					<div class="wcs_popup_person_content">
-						<div class="wcs_popup_person_name">YERIMA Pierrick</div>
+						<div class="wcs_popup_person_name">Pierrick ALI-YERIMA</div>
 						<div class="wcs_popup_person_description">Directeur commercial</div>
 						<div class="wcs_popup_person_status">En ligne</div>
 					</div>  

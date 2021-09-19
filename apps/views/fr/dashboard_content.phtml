@@ -5,7 +5,7 @@
                 <div class="main-cards">
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">50000 FCFA</span>
+                        <span class="solde"> <?=$first_box[0] ? $first_box[0] : 0?> FCFA</span>
                         <span>Crédit téléphonique</span>
                     </div>
                     <div>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">50000 FCFA</span>
+                        <span class="solde"><?=$second_box[0] ? $second_box[0] : 0?> FCFA</span>
                         <span>Crédit Mobile money</span>
                     </div>
                     <div>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">50000 FCFA</span>
+                        <span class="solde"><?= $third_box[0] ? $third_box[0] : 0?> FCFA</span>
                         <span>Crédit téléphonique</span>
                     </div>
                     <div>
@@ -32,8 +32,8 @@
                 </div>
                 <div class="d-flex align-items-center padding-1 card-single justify-content-between">
                     <div class="d-flex flex-column">
-                        <span class="solde">50000 FCFA</span>
-                        <span>Mobile money</span>
+                        <span class="solde"><?=$fourth_box[0] ? $fourth_box[0] :0?> FCFA</span>
+                        <span>Crédit Moov money</span>
                     </div>
                     <div>
                         <img class="img-gsm" src="<?php $lib->customerSite ?>/UIResources/images/mymomo.png" alt="" srcset="">
@@ -47,7 +47,7 @@
                             <span>Transactions</span>
                         </div>
                         <div class="chart-container padding-1">
-                            <canvas id="myChart" width="300" height="200"></canvas>
+                            <canvas id="barChart" width="300" height="200"></canvas>
                         </div>
                         
                         <!--<div id="chartContainer2" style="height: 370px; max-width: 920px; margin: 0px auto;"></div> -->
@@ -94,7 +94,7 @@
                         <span>Opérations</span>
                     </div>
                     <div class="chart-container2 padding-1">
-                        <canvas id="myChart2"></canvas>
+                        <canvas id="camenbertChart"></canvas>
                     </div>
                             <!--<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>-->
                 </div>
@@ -213,15 +213,15 @@
                         </div>
                     </div>-->
                 </div>
-                <div class="activity-card carmember"> 
+                <!--<div class="activity-card carmember"> 
                     <div class="card-single-header padding-10">
                         <span>Nouveaux Marchands</span>
                     </div>
                     <div class="chart-container2 padding-1">
                         <canvas id="myChart3"></canvas>
-                    </div>
+                    </div>-->
                             <!--<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>-->
-                </div>
+                <!--</div>-->
             </section>
             <?php endif;?>
         <?php endif;?>

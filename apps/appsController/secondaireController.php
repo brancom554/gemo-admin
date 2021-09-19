@@ -1,8 +1,8 @@
 <?php
 
 
-    if (intval($url_array[4]) >0) {
-        switch ($url_array[5]) {  
+    if (intval($url_array[3]) >0) {
+        switch ($url_array[4]) {  
             case "addLicenceSecondaire":
                 include "addLicenceSecondaire.php";
                 break;
@@ -14,7 +14,7 @@
     }   
     
 else {
-    switch ($url_array[4]) {          
+    switch ($url_array[3]) {          
         case "activer":
             include "activerLicenceSecondaire.php";
             break;

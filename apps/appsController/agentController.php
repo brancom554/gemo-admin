@@ -13,6 +13,9 @@ switch ($url_array[3]) {
     case "licence":
         include "addAgentLicence.php";
         break;
+    case "attributionLicence":
+        include "attributionLicence.php";
+        break;
     
     default:
         include "agent.php";

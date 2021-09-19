@@ -43,4 +43,30 @@ class Licence
         $db = "";
         return true;
     }
+
+    function licenceAttribution($agent, $licence){
+        $sql = 'UPDATE users SET licence_id=0 WHERE licence_id=:licence';
+
+        $data = array("licence" => $licence);
+        $db = new Database();
+        $response = $db->InsertDb($sql,$data);
+
+
+        if($response === true) {
+            $sql1 = 'UPDATE users SET licence_id=:licence WHERE user_id=:id';
+            $data = array("id" => $agent,"licence" => $licence);
+            $db = new Database();
+            $response = $db->InsertDb($sql1,$data);
+
+            if(!is_array($response)){
+                header('Location:/administration/agent');
+                exit;
+            }else{
+                var_dump($response);
+            }
+            exit;
+        }
+
+       
+    }
 }

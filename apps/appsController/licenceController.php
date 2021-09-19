@@ -1,6 +1,9 @@
 <?php
 
-    switch ($url_array[3]) {  
+    switch ($url_array[2]) { 
+        case "addLicence":
+            include "addLicence.php";
+            break; 
         case "secondaire":
             include "secondaireController.php";
             break;

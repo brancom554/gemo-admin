@@ -4,28 +4,33 @@
             <div class="track padding-bottom-20">
                 <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
             </div>
-            <!-- <div class="main-btn">
-                <a href="addLicence" id="myBtn"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter une nouvelle licence</a>
-            </div> -->
            
             <section class="recent">
                 <div class="activity">
                     <div style="padding-top: 5px;" class="activity-card">
-                        <h3>Details Inventaire</h3>
+                        <h3>Details de <?=$url_array[5] ?> </h3>
                         <div class="table-responsive">
                          
                             <table id="tables" style="margin-top: 30px;" border="0">
                             <thead>
                                     <tr>
                                         <th>Montant de début</th>
-                                        <th>Montant fin</th>
+                                        <th>Montant de fin</th>
                                         <th>Montant de vente</th>
                                         <th>Nombre de transaction</th>
-                                        <!-- <th style="text-align:center">Actions</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
-                              
+                                <?php if(isset($response)): ?>
+                                        <?php foreach($response as $res): ?>
+                                        <tr>
+                                             <td><?=$res['balance_start'] ?></td>
+                                             <td><?=$res['balance_end'] ?></td>
+                                             <td><?=$res['sales_amount'] ?></td>
+                                             <td><?=$res['nb_transactions'] ?></td>            
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </tbody>
                             </table>                       
                         </div>   

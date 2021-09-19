@@ -7,15 +7,30 @@
         <div class="card-filter">
         <form class="row g-3" action="" method="post">
             <div class="col-md-4">
-                <label for="marchand" class="form-label">Marchands</label>
-                <select id="marchand" name="marchand" class="form-select">
-                    <option selected>Séléctionner un marchand</option>
-                    <?php if(isset($data['marchand'])): ?>
-                        <?php foreach($data['marchand'] as $marchand): ?>
-                            <option value="<?=$marchand['application_uuid'] ?>"><?=$marchand['firstname'] ?> <?=$marchand['lastname'] ?></option>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </select>
+                <?php if($_SESSION['access'] == '1'):?>
+                    <label for="marchand" class="form-label">Marchands</label>
+                
+                    <select id="marchand" name="marchand" class="form-select">
+                        <option selected>Séléctionner un marchand</option>
+                        <?php if(isset($data['marchand'])): ?>
+                            <?php foreach($data['marchand'] as $marchand): ?>
+                                <option value="<?=$marchand['application_uuid'] ?>"><?=$marchand['firstname'] ?> <?=$marchand['lastname'] ?></option>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </select>
+                <?php else :?>
+                    <?php if($_SESSION['access'] == '2'):?>
+                        <label for="manager" class="form-label">Manager</label>
+                        <select id="manager" name="manager" class="form-select">
+                            <option selected>Séléctionner un manager</option>
+                            <?php if(isset($data['marchand'])): ?>
+                                <?php foreach($data['marchand'] as $marchand): ?>
+                                    <option value="<?=$marchand['company_id'] ?>"><?=$marchand['firstname'] ?> <?=$marchand['lastname'] ?></option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+                    <?php endif;?>
+                <?php endif;?>
             </div>
             <div class="col-md-4">
                 <label for="debut" class="form-label">Date début</label>
@@ -42,30 +57,62 @@
                                     <i class="fas fa-search"></i>
                                 </div>
                             </div>-->
-                            <table id="tables" style="margin-top: 30px;" border="0">
-                                <thead>
-                                    <tr>
-                                        <th>Types</th>
-                                        <th>Descriptions</th>
-                                        <th>Dates</th>
-                                        <th>Gsm</th>
-                                        
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php if(isset($data['operations'])): ?>
-                                        <?php foreach($data['operations'] as $opération): ?>
+                            <?php if($_SESSION['access'] == '1'):?>
+                                <table id="tables" style="margin-top: 30px;" border="0">
+                                    <thead>
                                         <tr>
-                                             <td><?=$opération['libelle'] ?></td>
-                                             <td><?=$opération['operation_date'] ?></td>                                             
-                                             <td><?=$opération['description'] ?></td>
-                                             <td><?=$opération['network_operator_name'] ?></td>
+                                            <th>Types</th>
+                                            <th>Descriptions</th>
+                                            <th>Dates</th>
+                                            <th>Gsm</th>
+                                            
+                                            
                                         </tr>
-                                        <?php endforeach; ?>
-                                    <?php endif; ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                    <?php if(isset($data['operations'])): ?>
+                                            <?php foreach($data['operations'] as $opération): ?>
+                                            <tr>
+                                                <td><?=$opération['libelle'] ?></td>
+                                                <td><?=$opération['operation_date'] ?></td>                                             
+                                                <td><?=$opération['description'] ?></td>
+                                                <td><?=$opération['network_operator_name'] ?></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
+                            <?php else :?>
+                                    <?php if($_SESSION['access'] == '2'):?>
+                                        <table id="tables" class="table table-striped" style="margin-top: 30px;" border="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Types</th>
+                                            
+                                            <th>Dates</th>
+                                            <th>Montant</th>
+                                            <th>Gsm</th>
+                                            <th>Agent</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php if(isset($data['operations'])): ?>
+                                            <?php foreach($data['operations'] as $opération): ?>
+                                            <tr>
+                                                <td><?=$opération['libelle'] ?></td>
+                                                <td><?=$opération['operation_date'] ?></td>                                             
+                                                <td><?=$opération['amount'] ?> FCFA</td>
+                                                <td><?=$opération['network_operator_name'] ?></td>
+                                                <td><?=$opération['firstname'] ?> <?=$opération['lastname'] ?></td>
+                                                
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
+                                <?php endif;?>
+                            <?php endif;?>
                         </div>   
                     </div>
                 </div>

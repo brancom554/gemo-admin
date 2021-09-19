@@ -75,6 +75,162 @@ $(document).ready(function(){
     }
 
   window.onload = function() {
+
+    $.ajax({
+        type: "POST",
+        url: "/dashboard/chart",
+        success:function(datas) { 
+            console.log(datas)
+            const v = JSON.parse(datas)
+            console.log(v)
+            const data1 = {
+                labels: [
+                  'Marchand Eco',
+                  'Marchand Premium'
+                ],
+                datasets: [{
+                  label: 'Marchands',
+                  data: v.offres,
+                  backgroundColor: [
+                    'rgb(255, 172, 100)',
+                    'rgb(0, 168, 243)'
+                  ],
+                  hoverOffset: 4
+                }]
+              };
+              var ctx = document.getElementById('myChart2');
+                var myChart2 = new Chart(ctx, {
+                type: 'doughnut',
+                data: data1,
+                options:{
+                    responsive:true,
+                }
+            });
+         }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "/dashboard/camembertChart",
+        success:function(chart2data) { 
+            console.log(chart2data)
+            const data1 = {
+                labels: [
+                  'SERVICES TELEPHONIQUES',
+                  'SERVICES FINANCIERS'
+                ],
+                datasets: [{
+                  label: '#marchands',
+                  data: chart2data,
+                  backgroundColor: [
+                    'rgb(255, 172, 100)',
+                    'rgb(0, 168, 243)'
+                  ],
+                  hoverOffset: 4
+                }]
+              };
+              var ctx = document.getElementById('camenbertChart');
+                var camenbertChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data1,
+                options:{
+                    responsive:true,
+                }
+            });
+         }
+    });
+
+
+    $.ajax({
+        type: "GET",
+        url: "/dashboard/barChart",
+        success:function(chartbar) { 
+        console.log(chartbar);
+        const v = JSON.parse(chartbar)
+        var ctx = document.getElementById('barChart');
+        var barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: v.mois,
+        datasets: [{
+            label: 'Opérations',
+            data: v.total,
+            fill: true,
+            tension:1,
+            backgroundColor: [
+                '#00A8F3'
+            ],
+            borderColor: [
+                '#00A8F3'
+            ],
+            borderWidth: 2,
+            borderRadius:10,
+            maxBarThickness:8,
+        }]
+        },
+        options: {
+            responsive:true,
+            scales: {
+                yAxes: [{
+                    ticks:{
+                        beginAtZero: true
+                    }
+                    
+                 }]
+                },
+            //aspectRatio:1
+            }
+        });
+
+    }});
+
+
+
+    $.ajax({
+        type: "POST",
+        url: "/dashboard/line",
+        success:function(datas) { 
+            console.log(datas)
+            const v = JSON.parse(datas)
+            console.log(v)
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: v.mois,
+                datasets: [{
+                    label: 'Opérations',
+                    data: v.total,
+                    fill: true,
+                    tension:1,
+                    backgroundColor: [
+                        '#00A8F3'
+                    ],
+                    borderColor: [
+                        '#00A8F3'
+                    ],
+                    borderWidth: 2,
+                    borderRadius:10,
+                    maxBarThickness:8,
+                }]
+            },
+            options: {
+                responsive:true,
+                scales: {
+                    yAxes: [{
+                        ticks:{
+                            beginAtZero: true
+                        }
+                        
+                    }]
+                },
+                //aspectRatio:1
+            }
+        });
+            
+         }
+    });
       
     $('.sidebar-menu li').on('click','a',function(e){
         
@@ -94,66 +250,7 @@ $(document).ready(function(){
         $(this).parent().children('ul').slideUp()
     })
 
-    var ctx = document.getElementById('myChart');
-    var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Juin', 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
-        datasets: [{
-            label: 'Opérations',
-            data: [50,12, 19, 3, 5, 2, 3, 0],
-            fill: true,
-            tension:1,
-            backgroundColor: [
-                '#00A8F3'
-            ],
-            borderColor: [
-                '#00A8F3'
-            ],
-            borderWidth: 2,
-            borderRadius:10,
-            maxBarThickness:8,
-        }]
-    },
-    options: {
-        responsive:true,
-        scales: {
-            yAxes: [{
-                ticks:{
-                    beginAtZero: true
-                }
-                
-            }]
-        },
-        //aspectRatio:1
-    }
-});
-
-const data = {
-    labels: [
-      'Marchand Basic',
-      'Marchand Premium'
-    ],
-    datasets: [{
-      label: 'Marchands',
-      data: [50, 100],
-      backgroundColor: [
-        'rgb(255, 172, 100)',
-        'rgb(0, 168, 243)'
-      ],
-      hoverOffset: 4
-    }]
-  };
-
-var ctx = document.getElementById('myChart2');
-    var myChart2 = new Chart(ctx, {
-    type: 'doughnut',
-    data: data,
-    options:{
-        responsive:true,
-    }
-});
+    
 
 const data3 = {
     labels: [

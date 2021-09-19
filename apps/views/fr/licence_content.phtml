@@ -1,10 +1,10 @@
 <main>
             <h2 class="main-title">Licences</h2>
             <div class="track padding-bottom-20">
-                <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
+                <span <?php if($page_requested =="licences"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
             </div>
             <div class="main-btn">
-                <a href="addLicence" id="myBtn"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter une nouvelle licence</a>
+                <a href="/licences/addLicence" id="myBtn"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter une nouvelle licence</a>
             </div>
            
             <section class="recent">
@@ -50,10 +50,10 @@
                                              </td>
                                              
                                              <td style="display:flex">
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/activer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 success cursor"> Offres</span>
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/bloquer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 danger cursor">Désactiver</span>
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/modifier/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 primary cursor">Relancer</span>
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/super/licence/secondaire/<?=$licence['licence_id'] ?>'" class="btn-action black pg-5 warning cursor">Licences secondaires</span>
+                                                  <!--<span onclick="document.location='<?php $lib->customerSite ?>/licences/activer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 success cursor"> Offres</span>-->
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/licences/bloquer/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 danger cursor">Désactiver</span>
+                                                  <!--<span onclick="document.location='<?php $lib->customerSite ?>/licences/modifier/<?=$licence['licence_id'] ?>'" class="btn-action white pg-5 primary cursor">Relancer</span>-->
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/licences/secondaire/<?=$licence['licence_id'] ?>'" class="btn-action black pg-5 warning cursor">Licences secondaires</span>
                                              </td>
                                         </tr>
                                         <?php endforeach; ?>

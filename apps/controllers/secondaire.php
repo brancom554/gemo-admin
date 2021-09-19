@@ -3,7 +3,7 @@ require_once(_APPS_PATH.'/classes/Database.php');
 
 try {
     $data=[
-        'id' => $url_array[4]
+        'id' => $url_array[3]
     ];
     $db = new Database();
     $q = $db->connectDb();

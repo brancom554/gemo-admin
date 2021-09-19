@@ -1,6 +1,8 @@
 <?php
 switch ($page_requested) {
-
+	case "licences":
+		include "licenceController.php";
+		break;
 	case "dashboard":
 		include "dashboard.php";
 		break;
@@ -72,9 +74,6 @@ switch ($page_requested) {
 	break;
 	case "super":
 		switch ($url_array[2]) {
-			case "addLicence":
-				include "addLicence.php";
-				break;
 			case "activer":
 				include "activer.php";
 				break;	
@@ -83,10 +82,6 @@ switch ($page_requested) {
 				break;	
 			case "modifier":
 				include "modifier.php";
-				break;
-
-			case "licence":
-				include "licenceController.php";
 				break;
 			case "compagnies":
 				include "compagnyController.php";
@@ -184,7 +179,7 @@ switch ($page_requested) {
 
 	default:
 	include "homeController.php";
-	$view = "index.phtml";
+	//$view = "index.phtml";
 
 	// $view = $viewPath . "/" . $lib->lang . "/" . "home_page_content.phtml";
 	break;

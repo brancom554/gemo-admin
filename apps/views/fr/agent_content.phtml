@@ -3,10 +3,16 @@
             <div class="track">
                 <span <?php if($page_requested =="administration"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $param2[0];?></span>
             </div>
+            <?php if($show):?>
+                <div class="main-btn">
+                    <button id="myBtn" onclick="document.location='<?php $lib->customerSite ?>/administration/agent/ajouter'"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter un nouveau marchand</button>
+                </div>
+            <?php else: ?>
+            <?php endif;?>
 
-            <div class="main-btn">
-                <button id="myBtn" onclick="document.location='<?php $lib->customerSite ?>/administration/agent/licence'"><i class="fas fa-plus" style="margin-right:15px ;"></i>Attribuer une licence</button>
-            </div>
+            <!-- <div class="main-btn">
+                <button style="margin-left: 85%;" id="myBtn" onclick="document.location='<?php $lib->customerSite ?>/administration/agent/licence'"><i class="fas fa-plus" style="margin-right:15px ;"></i>Attribuer une licence</button>
+            </div> -->
             
             <section class="recent">
                 <div class="activity">
@@ -25,21 +31,22 @@
                                         <th>Licence key</th>
                                         <th>Date d'activation</th>
                                         <th>Date d'expiration</th>
-                                        <th>Agents</th>
+                                        <th>Agents associer</th>
                                         <th>Statut</th>
                                         <th style="text-align:center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php if(!empty($data['licences'])): ?>
+                                <?php if(isset($data['licences'])): ?>
                                         <?php foreach($data['licences'] as $licence): ?>
                                         <tr>
-                                             <td><?=$licence['licence_key'] ?></td>
+                                             <td><?= $licence['licence_key'] ?></td>
                                              
                                              <td><?=$licence['activation_date'] ?></td>
                                              <td><?=$licence['expiration_date'] ?></td>
-                                             <td><?=$licence['firstname'] .' '. $licence['lastname'] ?></td>
-
+                                          
+                                            <td><?= isset($licence['user_id']) ? $licence['firstname'] .' '. $licence['lastname'] : 'Pas d\'utilisateur' ?></td>
+    
                                              <td>
                                                   <?php if($licence['is_active'] == 1): ?>
                                                        <span class="span-success success">Activer</span>
@@ -51,9 +58,12 @@
                                                        <span class="span-success danger">Revoquer</span>
                                                   <?php //endif; ?>-->
                                              </td>
-                                             <td>
-                                                 
-                                             <span onclick="document.location='<?php $lib->customerSite ?>/administration/agent/revocation/<?=$licence['licence_id'] ?>'" class="cursor btn-action white pg-5 danger">Révoquer</span>
+                                             <td style="text-align:center">
+                                             <span onclick="document.location='<?php $lib->customerSite ?>/administration/agent/attributionLicence/<?=$licence['licence_id'] ?>'" class="cursor btn-action white pg-5 success">Attribuer</span>
+                                               
+                                             <?php if(isset($licence['user_id'])): ?>
+                                             <span onclick="document.location='<?php $lib->customerSite ?>/administration/agent/revocationLicence/<?=$licence['licence_id'] ?>'" class="cursor btn-action white pg-5 danger">Révoquer</span>
+                                             <?php endif; ?>
                                             </td>
     
                                         </tr>

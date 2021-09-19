@@ -20,7 +20,6 @@
                                         <th>Nom de l'inventaire</th>
                                         <th>Date début </th>
                                         <th>Date fin</th>
-                                        
                                         <th style="text-align:center">Actions</th>
                                     </tr>
                                 </thead>
@@ -30,10 +29,11 @@
                                         <tr>
                                              <td><?=$res['inventory_name'] ?></td>
                                              <td><?=$res['date_from'] ?></td>
-                                             <td><?=$res['date_to'] ?></td>
-                                             <td> 
-                                                <!-- <span id="modal2" onclick="document.location='<?php $lib->customerSite ?>/super/licence/activer/<?=$licence['licence_id'] ?>'" data-target="#modal1" class="span-success cursor success">Details</span> -->
-                                                <span onclick="document.location='<?php $lib->customerSite ?>/administration/inventaire/details/<?=$res['inventory_id'] ?>'" class="span-success cursor success">Details</span>
+                                             <td><?=$res['date_to'] ?></td>           
+                                             <td style="text-align:center"> 
+                                               
+                                                <span onclick="document.location='<?php $lib->customerSite ?>/administration/inventaire/details/<?=$res['inventory_id'] ?>/<?=$res['inventory_name'] ?>'" class="cursor btn-action white pg-5 primary">Details</span>
+
                                              </td>
                                             
                                         </tr>
@@ -44,26 +44,6 @@
                         </div>   
                     </div>
                 </div>
-                         
-<!-- Modal Structure -->
-<!-- <div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
-
-<script>
- 
-        $( "#modal2" ).click(function() {
-            // alert( "Handler for .click() called." );
-            $('.modal').modal();
-});
-
-</script> -->
 
             </section>
         </main>

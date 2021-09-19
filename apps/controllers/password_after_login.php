@@ -1,6 +1,6 @@
 <?php
 require_once(_APPS_PATH.'/classes/Database.php');
-require_once(_APPS_PATH.'/classes/Password_after_login.php');
+require_once(_APPS_PATH.'/classes/User.php');
 
 if (isset($_POST['valider']) ) {
     $password1 = filter_input(INPUT_POST,'password1',FILTER_SANITIZE_STRING);
@@ -17,7 +17,7 @@ if (isset($_POST['valider']) ) {
                 $message3 = "Veuillez renseignez le meme mot de passe dans les champs";
             }
 
-            $password = new Password_after_login();
+            $password = new User();
             $error = $password->changePassword($password2);
 
 

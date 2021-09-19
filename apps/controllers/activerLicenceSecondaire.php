@@ -2,14 +2,14 @@
 require _APPS_PATH.'/classes/Database.php';
 
 
-if (isset($url_array[5])) {
+if (isset($url_array[4])) {
     $date_actif = new DateTime();
     $date_activ = $date_actif->format('y-m-d H:i');
     $db = new Database();
     $conn = $db->connectDb();
     $data=[
         'is_active'=> 1,
-        'id' => $url_array[5],
+        'id' => $url_array[4],
         'activation' => $date_activ
     ];
     
@@ -19,7 +19,7 @@ if (isset($url_array[5])) {
             $query = $conn->prepare($sql);
             if ($query->execute($data)) {
                 if ($conn->commit()) {
-                    header('Location:/super/licence');
+                    header('Location:/licences');
                     exit;
                 }
             }else {
