@@ -2,12 +2,12 @@
 require _APPS_PATH.'/classes/Database.php';
 
 
-if (isset($url_array[5])) {
+if (isset($url_array[4])) {
     $db = new Database();
     $conn = $db->connectDb();
     $data=[
         'is_active'=> 0,
-        'id' => $url_array[5],
+        'id' => $url_array[4],
     ];
     
     try {
@@ -16,7 +16,7 @@ if (isset($url_array[5])) {
             $query = $conn->prepare($sql);
             if ($query->execute($data)) {
                 if ($conn->commit()) {
-                    header('Location:/super/licence');
+                    header('Location:/licences');
                     exit;
                 }
             }else {

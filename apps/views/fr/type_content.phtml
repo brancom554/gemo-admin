@@ -4,7 +4,7 @@
                 <span <?php if($page_requested =="configurations"){ ?> class="actives" <?php } ?>><?php echo $page_requested;?></span><span>/</span><span><?php echo $url_array[2];?></span>
             </div>
             <div class="main-btn">
-                <button id="myBtn" onclick="document.location='<?php $lib->customerSite ?>/configurations/types_licences/addType'"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter une nouvelle offre</button>
+                <button id="myBtn" onclick="document.location='<?php $lib->customerSite ?>/offres/addType'"><i class="fas fa-plus" style="margin-right:15px ;"></i>Ajouter une nouvelle offre</button>
             </div>
             
             <section class="recent">
@@ -35,7 +35,7 @@
                                              <td><?=$type['licence_nb_equipment'] ?></td>
                                              <td><?=$type['licence_nb_transactions_day'] ?></td>                                    
                                              <td style="display:flex">
-                                                  <span onclick="document.location='<?php $lib->customerSite ?>/configurations/types_licences/modifier/<?=$type['licence_type_id'] ?>'" class="btn-action white pg-5 primary">Modifier</span>
+                                                  <span onclick="document.location='<?php $lib->customerSite ?>/offres/modifier/<?=$type['licence_type_id'] ?>'" class="btn-action cursor white pg-5 primary">Modifier</span>
                                              </td>
                                         </tr>
                                         <?php endforeach; ?>

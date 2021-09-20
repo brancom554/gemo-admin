@@ -3,7 +3,7 @@ require_once(_APPS_PATH.'/classes/Database.php');
 
 class User{
     function seConnecter(string $telephone, $passwords){    
-        $sql = "SELECT user_id,last_update_date,firstname,lastname,encrypted_password,is_manager,address_id,company_id,company_token FROM users WHERE phone_number= $telephone";
+        $sql = "SELECT user_id,last_update_date,firstname,lastname,encrypted_password,is_manager,address_id,company_id,company_token,is_active_flag FROM users WHERE phone_number= $telephone";
         $db = new Database();
         try {
             $data['user'] = $db->DisplaysDataDb($sql);
@@ -16,24 +16,29 @@ class User{
                     $_SESSION['companie_token'] = $data['user']['company_token'];
                     $_SESSION['user_id'] = $data['user']['user_id'];
                     if ($_SESSION['access'] == '1') {
-                        //$sql = "SELECT licence_id,licence_nb_equipement FROM users,licences,licence_types WHERE users.company_id = licences.created_for_company_id AND licences.licence_type_id = licence_types.licence_type_id AND phone_number= $telephone";
-                        $sql = "SELECT licence_id,licence_nb_equipment FROM licences lic INNER JOIN users u ON lic.created_for_company_id = u.company_id JOIN licence_types types ON lic.licence_type_id = types.licence_type_id WHERE u.phone_number= $telephone";
-                        $data['licence'] = $db->DisplaysDataDb($sql);
-                        if (!empty($data['licence']['licence_nb_equipement'])) {
-                            $_SESSION['equipement'] = $data['licence']['licence_nb_equipement'];
-                        }
-                        if (!empty($data['licence']['licence_id'])) {
-                            $_SESSION['licence'] = $data['licence']['licence_id'];
-                        }
+                        if ($data['user']['is_active_flag'] == 1) {
+                            $sql = "SELECT licence_id,licence_nb_equipment FROM licences lic INNER JOIN users u ON lic.created_for_company_id = u.company_id JOIN licence_types types ON lic.licence_type_id = types.licence_type_id WHERE u.phone_number= $telephone";
+                            $data['licence'] = $db->DisplaysDataDb($sql);
+                            if (!empty($data['licence']['licence_nb_equipement'])) {
+                                $_SESSION['equipement'] = $data['licence']['licence_nb_equipement'];
+                            }
+                            if (!empty($data['licence']['licence_id'])) {
+                                $_SESSION['licence'] = $data['licence']['licence_id'];
+                            }
 
-                        if(isset($data['user']['last_update_date']) && $data['user']['last_update_date'] !== null){
-                            header('Location:/dashboard');
-                        }else{
-                            header('Location:/change/reset');
+                            if(isset($data['user']['last_update_date']) && $data['user']['last_update_date'] !== null){
+                                header('Location:/dashboard');
+                            }else{
+                                header('Location:/change/reset');
+                            }
+                            //header('Location:/change/reset');
+                            //header('Location:/dashboard');
+                            exit;
                         }
-                        //header('Location:/change/reset');
-                        //header('Location:/dashboard');
-                        exit;
+                        session_destroy();
+                        return $error = "Veuillez contacter le support de GEMO.<br>Le numéro n'est plus actif.";
+                        //$sql = "SELECT licence_id,licence_nb_equipement FROM users,licences,licence_types WHERE users.company_id = licences.created_for_company_id AND licences.licence_type_id = licence_types.licence_type_id AND phone_number= $telephone";
+                        
                     }elseif ($_SESSION['access'] == '2') {
                         header('Location:/dashboard');
                         exit;
@@ -43,7 +48,8 @@ class User{
                     }
                 }
                 else {
-                    return $error = "Le numéro ou le mots de passe est incorrect.";
+                     return $error = "Le numéro ou le mots de passe est incorrect.";
+                    //return var_dump($data['user']);
                 }
             }
         } catch (\Throwable $th) {

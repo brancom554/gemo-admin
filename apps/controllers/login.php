@@ -23,6 +23,7 @@ if (isset($_POST['connexion']) ) {
             $message2 = "Veuillez remplir le champs";
             
         }else {
+            //var_dump($passwords);
             $user = new User();
             $error = $user->seConnecter($telephone,$passwords);
         }

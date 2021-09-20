@@ -8,7 +8,7 @@ if (isset($_POST['soumettre'])) {
     }
         $sql = 'UPDATE licence_types SET licence_type_name=:licence_type_name,licence_nb_equipment=:licence_nb_equipment,licence_nb_transactions_day=:licence_nb_transactions_day WHERE licence_type_id=:id';
         $data=[
-            'id' => $url_array[4],
+            'id' => $url_array[3],
             'licence_type_name'=> strtoupper($_POST['libelle']),
             'licence_nb_equipment' => $_POST['equipement'],
             'licence_nb_transactions_day' => $_POST['transaction']
@@ -16,7 +16,7 @@ if (isset($_POST['soumettre'])) {
         $db = new Database();
         $conn = $db->InsertDb($sql,$data);
         if (!is_array($conn)) {             
-            header('Location:/configurations/types_licences');
+            header('Location:/offres');
             exit;
         }else {
             var_dump($conn);
@@ -25,7 +25,7 @@ if (isset($_POST['soumettre'])) {
 }
 
 $data=[
-    'id' => $url_array[4]
+    'id' => $url_array[3]
 ];
 $db = new Database();
 $q = $db->connectDb();

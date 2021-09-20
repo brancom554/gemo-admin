@@ -46,7 +46,7 @@ if (isset($_POST['soumettre'])) {
         
             $query = $db->InsertDb($sql,$data);
             if ($query == true) {
-                header('Location:/super/manager');
+                header('Location:/managers');
                 //var_dump($query);
                 exit;  
             }else {

@@ -9,7 +9,7 @@ if (isset($url_array[4])) {
     $conn = $db->connectDb();
     $data=[
         'is_active'=> 1,
-        'id' => $url_array[4],
+        'id' => $url_array[3],
         'activation' => $date_activ
     ];
     
@@ -19,7 +19,7 @@ if (isset($url_array[4])) {
             $query = $conn->prepare($sql);
             if ($query->execute($data)) {
                 if ($conn->commit()) {
-                    header('Location:/super/licence');
+                    header('Location:/licences');
                     exit;
                 }
             }else {

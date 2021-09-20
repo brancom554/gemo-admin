@@ -21,7 +21,7 @@ if (isset($_POST['soumettre'])) {
             $query = $db->InsertDb($sql,$data);
             if ($query) {
                 
-                    header('Location:/super/compagnies');
+                    header('Location:/marchands');
                     exit;
                 
             }else {
