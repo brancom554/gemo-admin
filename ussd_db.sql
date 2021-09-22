@@ -237,7 +237,8 @@ CREATE TABLE `licences` (
   `activation_date` datetime DEFAULT NULL COMMENT 'Date d''activation de la licence',
   `expiration_date` datetime DEFAULT NULL COMMENT 'Date d''expiration',
   `licence_parent_id` int(11) DEFAULT NULL COMMENT 'Détermine si c''est une licence secondaire',
-  `licence_type_id` int(11) DEFAULT NULL
+  `licence_type_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -340,7 +341,8 @@ CREATE TABLE `operations` (
   `balance_after_operate` int(11) DEFAULT NULL COMMENT 'solde après operation',
   `amount` int(11) DEFAULT NULL,
   `operation_date` datetime DEFAULT NULL,
-  `network_operator_name` varchar(45) DEFAULT NULL
+  `network_operator_name` varchar(45) DEFAULT NULL,
+   `statut_operation` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -742,7 +744,8 @@ CREATE TABLE `user_operations` (
   `company_token` varchar(45) DEFAULT NULL,
   `inventory_id` int(11) DEFAULT NULL,
   `application_uuid` varchar(105) DEFAULT NULL,
-  `data_version` varchar(105) DEFAULT NULL
+  `data_version` varchar(105) DEFAULT NULL,
+  `statut_operation` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -899,7 +902,8 @@ ALTER TABLE `inventory_detail`
 --
 ALTER TABLE `licences`
   ADD PRIMARY KEY (`licence_id`),
-  ADD KEY `fk_licences_licence_types1_idx` (`licence_type_id`);
+  ADD KEY `fk_licences_licence_types1_idx` (`licence_type_id`),
+  ADD KEY `fk_licences_user_idx` (`user_id`);
 
 --
 -- Indexes for table `licence_features`
