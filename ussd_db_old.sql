@@ -139,8 +139,8 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`company_id`, `company_number`, `company_name`, `creation_date`, `company_token`, `registration_number`, `application_uuid`, `data_version`) VALUES
-(1, 'RCCM021544', 'SOCIETE TEST', '2021-07-08 12:24:10', 'TEST08072021', '1234567888', '041750ce-e473-462c-af82-99567dc25b4b', '1'),
-(2, '21082021', 'DKO', '2021-08-21 15:36:35', 'DKO', '20218012', NULL, '1');
+(1, 'RCCM021544', 'TEST0', '2021-07-08 12:24:10', 'TEST08072021', '1234567888', '041750ce-e473-462c-af82-99567dc25b4b', '1'),
+(2, '21082021', 'TEST1', '2021-08-21 15:36:35', 'DKO', '20218012', NULL, '1');
 
 -- --------------------------------------------------------
 
